@@ -54,5 +54,29 @@
         "files": [
             "Volunteers__cs.json"
         ]
+    },
+    {
+        "sobject": "Path_Activity__c",
+        "saveRefs": true,
+        "resolveRefs": false,
+        "files": [
+            "Path_Activity__cs.json"
+        ]
+    },
+    {
+        "sobject": "Walkthrough__c",
+        "saveRefs": false,
+        "resolveRefs": true,
+        "files": [
+            "Walkthrough__cs.json"
+        ]
+    },
+    {
+        "sobject": "Walkthrough__c",
+        "saveRefs": false,
+        "resolveRefs": false,
+        "files": [
+            "orphan-Walkthrough__cs.json"
+        ]
     }
 ]

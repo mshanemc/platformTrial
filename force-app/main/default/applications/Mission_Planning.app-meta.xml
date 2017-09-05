@@ -7,7 +7,6 @@
     <formFactors>Large</formFactors>
     <label>Mission Planning</label>
     <navType>Standard</navType>
-    <tab>Start</tab>
     <tab>Mission__c</tab>
     <tab>Equipment__x</tab>
     <tab>standard-Account</tab>

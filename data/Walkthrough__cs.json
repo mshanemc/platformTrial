@@ -1,0 +1,22 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Walkthrough__c",
+                "referenceId": "Walkthrough__cRef1"
+            },
+            "Active__c": false,
+            "Activity__c": "@Path_Activity__cRef1",
+            "BodyText__c": "<p>The App Launcher (waffle menu) lets you switch between apps in Salesforce. Open it and click the <b>Mission Planning</b> app</p>",
+            "Completed__c": true,
+            "CSS__c": "slds-popover,slds-popover_walkthrough,slds-nubbin_left,no-pointer,cPopoverManager",
+            "Header__c": "App Launcher",
+            "Next_Button_Label__c": "Next",
+            "Selector__c": "div.slds-icon-waffle",
+            "Sequence__c": 1,
+            "Show_Close_Button__c": false,
+            "Show_Next_Button__c": false,
+            "Name": "Waffle Menu"
+        }
+    ]
+}
