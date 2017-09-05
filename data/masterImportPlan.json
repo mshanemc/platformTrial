@@ -1,0 +1,58 @@
+[
+    {
+        "sobject": "Account",
+        "saveRefs": true,
+        "resolveRefs": false,
+        "files": [
+            "Accounts.json"
+        ]
+    },
+    {
+        "sobject": "Contact",
+        "saveRefs": false,
+        "resolveRefs": true,
+        "files": [
+            "Contacts.json"
+        ]
+    },
+    {
+        "sobject": "Mission__c",
+        "saveRefs": false,
+        "resolveRefs": true,
+        "files": [
+            "Mission__cs.json"
+        ]
+    },
+    {
+        "sobject": "Path_Activity__c",
+        "saveRefs": true,
+        "resolveRefs": false,
+        "files": [
+            "Path_Activity__cs.json"
+        ]
+    },
+    {
+        "sobject": "Trial_Activity__c",
+        "saveRefs": true,
+        "resolveRefs": false,
+        "files": [
+            "Trial_Activity__cs.json"
+        ]
+    },
+    {
+        "sobject": "Volunteer_Event__c",
+        "saveRefs": true,
+        "resolveRefs": false,
+        "files": [
+            "Volunteer_Event__cs.json"
+        ]
+    },
+    {
+        "sobject": "Volunteers__c",
+        "saveRefs": false,
+        "resolveRefs": true,
+        "files": [
+            "Volunteers__cs.json"
+        ]
+    }
+]

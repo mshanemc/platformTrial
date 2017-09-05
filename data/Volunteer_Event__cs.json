@@ -1,0 +1,14 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Volunteer_Event__c",
+                "referenceId": "Volunteer_Event__cRef1"
+            },
+            "Name": "Reading to Kids at Vis Valley Elementary",
+            "Description__c": "<p>It&#39;s our monthly trip to read books for the kindergartners again!  </p><p>We&#39;ll take some of our comic books...dress as yourselves!</p>",
+            "End__c": "2017-09-18T18:00:00.000+0000",
+            "Start__c": "2017-09-18T15:00:00.000+0000"
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+.THIS ol {
+	list-style: decimal;
+}
+
+.THIS ol li {
+	margin-left:30px;
+}

@@ -1,0 +1,21 @@
+<aura:component >
+	<aura:attribute name="recordId" type="id" required="true" access="global"/>
+	<aura:attribute name="field" type="string" required="true" access="global"/>
+	<aura:attribute name="value" type="string" required="true" access="global"/>
+	<aura:attribute name="label" type="string" required="true" access="global"/>
+	<aura:attribute name="valueType" type="string" required="true" default="string" access="global"/>
+	<aura:attribute name="onSuccess" type="object" access="global"/>
+	<aura:attribute name="class" type="string" access="global"/>
+	<aura:attribute name="variant" type="string" access="global"/>
+
+	<aura:attribute name="targetFields" type="object" />
+	<aura:attribute name="realValue" type="object" />
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+	<force:recordData aura:id="frd" mode="EDIT" targetFields="{!v.targetFields}" />
+
+	<lightning:button variant="{!v.variant}" label="{!v.label}" onclick="{!c.setValue}" class="{!v.class}"/>
+	<c:LightningErrorHandler aura:id="leh" />
+
+</aura:component>

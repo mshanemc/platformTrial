@@ -1,0 +1,38 @@
+<aura:component>
+
+	<aura:attribute name="header" type="string" default="" access="global" required="false"/>
+	<aura:attribute name="bodyText" type="string" default="" access="global" required="true"/>
+	<aura:attribute name="showNext" type="boolean" default="true" access="global" required="false"/>
+	<aura:attribute name="nextButtonText" type="string" default="Next" access="global" required="false"/>
+	<aura:attribute name="stepNumber" type="integer" default="1" access="global" required="true"/>
+	<aura:attribute name="stepCount" type="integer" default="1" access="global" required="true"/>
+	<aura:attribute name="nextAction" type="object" access="global" required="false"/>
+	<aura:attribute name="closeMessage" type="string" access="global" required="false"/>
+
+	<aura:handler event="ltng:sendMessage" action="{!c.handleEvent}"/>
+
+	<!-- TODO: listen for events that close you -->
+	<lightning:overlayLibrary aura:id="overlayLib"/>
+
+	<aura:if isTrue="{!v.header}">
+		<header class="slds-popover__header slds-p-vertical_medium">
+			<h2 class="slds-text-heading_medium">{!v.header}</h2>
+		</header>
+	</aura:if>
+
+	<div class="slds-popover__body">
+		<p><lightning:formattedRichText value="{!v.bodyText}"/></p>
+	</div>
+
+	<footer class="slds-popover__footer">
+		<div class="slds-grid slds-grid_vertical-align-center">
+			<aura:if isTrue="{!and(v.stepNumber, v.stepCount)}">
+				<span class="slds-text-title">	Step {!v.stepNumber} of {!v.stepCount}</span>
+			</aura:if>
+			<aura:if isTrue="{!v.showNext}">
+				<lightning:button variant="brand" label="{!v.nextButtonText}" onclick="{!c.next}" class="slds-col_bump-left"/>
+			</aura:if>
+    </div>
+  </footer>
+
+</aura:component>

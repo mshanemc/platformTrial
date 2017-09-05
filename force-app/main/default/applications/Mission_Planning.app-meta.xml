@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#0070D2</headerColor>
+    </brand>
+    <description>Secret Lair for all for mission planning</description>
+    <formFactors>Large</formFactors>
+    <label>Mission Planning</label>
+    <navType>Standard</navType>
+    <tab>Start</tab>
+    <tab>Mission__c</tab>
+    <tab>Equipment__x</tab>
+    <tab>standard-Account</tab>
+    <tab>standard-File</tab>
+    <tab>standard-Dashboard</tab>
+    <tab>standard-report</tab>
+    <tab>standard-OtherUserProfile</tab>
+    <tab>Path_Activity__c</tab>
+    <tab>Trial_Activity__c</tab>
+    <uiType>Lightning</uiType>
+    <utilityBar>Mission_Planning_UtilityBar</utilityBar>
+</CustomApplication>

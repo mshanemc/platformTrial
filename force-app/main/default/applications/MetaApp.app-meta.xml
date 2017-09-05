@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#000000</headerColor>
+    </brand>
+    <description>part of the trial used for managing the trial</description>
+    <formFactors>Large</formFactors>
+    <label>MetaApp</label>
+    <navType>Standard</navType>
+    <tab>Trial_Activity__c</tab>
+    <tab>Path_Activity__c</tab>
+    <uiType>Lightning</uiType>
+    <utilityBar>MetaApp_UtilityBar</utilityBar>
+</CustomApplication>

@@ -1,0 +1,168 @@
+<aura:component implements="flexipage:availableForAllPageTypes, force:appHostable" extends="c:promiseErrorHandler" controller="TrialUtilities">
+
+	<aura:attribute name="trialFields" type="object" />
+	<aura:attribute name="trialFieldsE" type="object" />
+	<aura:attribute name="error" type="object" />
+	<aura:attribute name="errorE" type="object" />
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+	<aura:attribute name="recordId" type="id"/>
+
+	<force:recordData fields="['Paths_Chosen__c', 'WelcomeViewed__c', 'Video_Watched__c']" mode="VIEW" targetFields="{!v.trialFields}" aura:id="trialRec" targetError="{!v.error}"/>
+
+	<force:recordData mode="EDIT" targetFields="{!v.trialFieldsE}" aura:id="trialRecE" fields="['Path_See_Apps__c', 'Path_Build_Apps__c', 'Path_IT_Tools__c', 'Path_Mobile__c']" targetError="{!v.errorE}"/>
+
+	<lightning:overlayLibrary aura:id="overlayLibModal"/>
+  <!-- welcome message -->
+	<aura:if isTrue="{!and(v.trialFields, !v.trialFields.WelcomeViewed__c)}">
+		<lightning:layout horizontalAlign="center" verticalAlign="center" class="background" multipleRows="true" pullToBoundary="large">
+			<lightning:layoutItem flexibility="auto" size="10" padding="around-large">
+
+				<h1 class="slds-text-heading_large slds-m-bottom--large">Welcome to the Salesorce Platform Free Trial</h1>
+
+				<p class="slds-text-heading_medium slds-m-bottom--medium" >Whether you're new to Salesforce, or just looking to see what you can do beyond CRM (Sales and Service), you've come to the right place.</p>
+
+				<p class="slds-text-heading_medium slds-m-bottom--medium" >You received an email with your username and the link to set your password.  You can use that to come back anytime, as well as to login to check out Salesforce on your phone (more on that later).</p>
+
+				<p class="slds-text-heading_medium slds-m-bottom--medium" >Ready to get started?</p>
+
+				<lightning:layout class="slds-m-top--xx-large">
+					<lightning:layoutItem size="3">
+						<c:ValueSettingButton variant="neutral" label="Yes" value="true" recordId="{!v.recordId}" field="WelcomeViewed__c" valueType="boolean" class="slds-button_huge"/>
+					</lightning:layoutItem>
+				</lightning:layout>
+
+			</lightning:layoutItem>
+		</lightning:layout>
+
+		<c:UniversalAnalyticsPageTag pageName="/welcome/welcome" pageTitle="welcome"/>
+	</aura:if>
+
+	<!-- path selection -->
+	<aura:if isTrue="{!and(v.trialFields, and(v.trialFields.WelcomeViewed__c, !v.trialFields.Paths_Chosen__c))}">
+		<lightning:layout horizontalAlign="space" verticalAlign="center" class="background" multipleRows="true" pullToBoundary="large">
+			<lightning:layoutItem flexibility="auto" size="7" padding="around-large">
+				<h1 class="slds-text-heading_large slds-m-bottom--large">What would you like to see?</h1>
+
+				<p class="slds-text-heading_medium slds-m-bottom--medium" >Click all that apply.  We'll make sure that your tour focuses on those items. </p>
+
+
+			</lightning:layoutItem>
+			<lightning:layoutItem flexibility="auto" size="2" padding="around-large">
+				<aura:if isTrue="{!or(or(v.trialFieldsE.Path_See_Apps__c, v.trialFieldsE.Path_Mobile__c), v.trialFieldsE.Path_Build_Apps__c)}">
+					<c:ValueSettingButton variant="neutral" label="Next" value="true" recordId="{!v.recordId}" field="Paths_Chosen__c" valueType="boolean" class="slds-button_huge"/>
+				</aura:if>
+			</lightning:layoutItem>
+
+			<lightning:layoutItem flexibility="grow" size="4" padding="around-large">
+				<div class="{!'selection_box slds-p-around_large' + if(v.trialFieldsE.Path_See_Apps__c, ' selected', '')}">
+					<h1 class="slds-text-heading_large slds-m-around_large slds-align_absolute-center">Apps in Action</h1>
+					<p class="slds-text-heading_medium slds-m-around_large slds-align_absolute-center">I want to see employees experience apps built on Salesforce</p>
+					<!-- <img src="http://via.placeholder.com/350x150"/> -->
+					<aura:if isTrue="{!!v.trialFieldsE.Path_See_Apps__c}">
+						<lightning:button label="Select" value="Path_See_Apps__c" onclick="{!c.select}" variant="brand" class="slds-align_absolute-center slds-button_huge"/>
+					</aura:if>
+					<aura:if isTrue="{!v.trialFieldsE.Path_See_Apps__c}">
+						<lightning:button label="Remove" value="Path_See_Apps__c" onclick="{!c.select}" variant="neutral" class="slds-align_absolute-center slds-button_huge"/>
+					</aura:if>
+				</div>
+
+			</lightning:layoutItem>
+
+			<!-- <lightning:layoutItem flexibility="grow" size="4" padding="around-large">
+				<div class="{!'selection_box slds-p-around_large' + if(v.trialFieldsE.Path_Mobile__c, ' selected', '')}">
+					<h1 class="slds-text-heading_large slds-m-around_large slds-align_absolute-center">Mobile Apps</h1>
+					<p class="slds-text-heading_medium slds-m-around_large slds-align_absolute-center">I want to try the apps on my phone using Salesforce1</p>
+					<aura:if isTrue="{!!v.trialFieldsE.Path_Mobile__c}">
+						<lightning:button label="Select" value="Path_Mobile__c" onclick="{!c.select}" variant="brand" class="slds-align_absolute-center slds-button_huge"/>
+					</aura:if>
+					<aura:if isTrue="{!v.trialFieldsE.Path_Mobile__c}">
+						<lightning:button label="Remove" value="Path_Mobile__c" onclick="{!c.select}" variant="neutral" class="slds-align_absolute-center slds-button_huge"/>
+					</aura:if>
+				</div>
+			</lightning:layoutItem> -->
+
+			<lightning:layoutItem flexibility="grow" size="4" padding="around-large">
+				<div class="{!'selection_box slds-p-around_large' + if(v.trialFieldsE.Path_Build_Apps__c, ' selected', '')}">
+					<h1 class="slds-text-heading_large slds-m-around_large slds-align_absolute-center">App Building</h1>
+					<p class="slds-text-heading_medium slds-m-around_large slds-align_absolute-center">I want to see how administrators and developers build the apps</p>
+					<!-- <img src="http://via.placeholder.com/350x150"/> -->
+					<aura:if isTrue="{!!v.trialFieldsE.Path_Build_Apps__c}">
+						<lightning:button label="Select" value="Path_Build_Apps__c" onclick="{!c.select}" variant="brand" class="slds-align_absolute-center slds-button_huge"/>
+					</aura:if>
+					<aura:if isTrue="{!v.trialFieldsE.Path_Build_Apps__c}">
+						<lightning:button label="Remove" value="Path_Build_Apps__c" onclick="{!c.select}" variant="neutral" class="slds-align_absolute-center slds-button_huge"/>
+					</aura:if>
+				</div>
+			</lightning:layoutItem>
+
+		</lightning:layout>
+
+		<c:UniversalAnalyticsPageTag pageName="/welcome/choosePath" pageTitle="choosePath"/>
+	</aura:if>
+
+	<!-- story setup-->
+	<aura:if isTrue="{!and(v.trialFields, and(v.trialFields.Paths_Chosen__c, !v.trialFields.Video_Watched__c))}">
+		<lightning:layout horizontalAlign="space" verticalAlign="center" class="background" multipleRows="true" pullToBoundary="large">
+			<lightning:layoutItem size="6" padding="around-large">
+				<h1 class="slds-text-heading_large slds-m-bottom--large">Orientation</h1>
+
+				<!-- <p class="slds-text-heading_small slds-m-vertical_medium">Please watch this orientation video to get you started.</p> -->
+
+				<p class="slds-text-heading_medium slds-m-vertical_medium">
+					Welcome to the SuperRangers!  We're a team of superheroes working to protect the world from the bad guys.
+				</p>
+				<p class="slds-text-heading_medium slds-m-vertical_medium">
+					Like any organization, there's always more work than there is time, so we use Salesforce keep everyone connected and moving in the same direction.  Salesforce helps us track high-level contacts, plan missions, and organize equipment, as well non-heroic things like getting questions answered and coordinating our volunteer activities.
+				</p>
+				<p class="slds-text-heading_medium slds-m-vertical_medium">
+					The Avengers poached our last Salesforce expert, so we're really glad you've stepped in to help us out.
+				</p>
+				<p class="slds-text-heading_medium slds-m-vertical_medium">
+					We'll take you on a tour of how we use Salesforce and what we've built.  Your mission, should you choose to accept it, is to make saving the world easier.
+				</p>
+
+			</lightning:layoutItem>
+			<lightning:layoutItem size="4" padding="around-large">
+				<img src="http://via.placeholder.com/600x600"/>
+			</lightning:layoutItem>
+			<lightning:layoutItem size="3">
+				<lightning:button variant="neutral" label="I read it.  I'm in!" class="slds-button_huge" onclick="{!c.storySet}"/>
+				<!-- <c:ValueSettingButton variant="neutral" label="I read it.  I'm in!" value="true" recordId="{!v.recordId}" field="Video_Watched__c" valueType="boolean" class="slds-button_huge"/> -->
+			</lightning:layoutItem>
+
+
+			<!-- <lightning:layoutItem size="2"/>
+			<lightning:layoutItem size="4" padding="around-large">
+				<c:ValueSettingButton variant="neutral" label="I read it.  I'm in!" value="true" recordId="{!v.recordId}" field="Video_Watched__c" valueType="boolean" class="slds-button_huge"/>
+			</lightning:layoutItem>
+			<lightning:layoutItem size="10" padding="around-large">
+				<c:youtubeVideoComponent videoId="OsC_zMcStro" startTime="35"/>
+			</lightning:layoutItem> -->
+		</lightning:layout>
+
+		<c:UniversalAnalyticsPageTag pageName="/welcome/orientationVideo" pageTitle="orientationVideo"/>
+
+	</aura:if>
+
+	<aura:if isTrue="{!and(v.trialFields, v.trialFields.Video_Watched__c)}">
+		<lightning:layout class="background" horizontalAlign="space" verticalAlign="center" >
+			<lightning:layoutItem>
+				<h1 class="slds-text-heading_large slds-m-bottom--large">placeholder</h1>
+			</lightning:layoutItem>
+		</lightning:layout>
+
+
+		<c:UniversalAnalyticsPageTag pageName="/welcome/ready" pageTitle="ready"/>
+
+	</aura:if>
+
+	<aura:if isTrue="{!v.recordId}">
+		<c:UniversalAnalytics aura:id="wua" location="welcome"/>
+	</aura:if>
+
+
+
+
+</aura:component>
