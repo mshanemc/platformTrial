@@ -9,8 +9,4 @@
 	<!-- leave this so that the CSS loads.  If there's no visibile markup in a component, the CSS doesn't load -->
 	&nbsp;
 
-	<aura:if isTrue="{!v.popovers.length>0}">
-		<c:popoverManager startOnInit="false" popovers="{!v.popovers}" aura:id="pom"/>
-	</aura:if>
-
 </aura:component>

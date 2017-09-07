@@ -2,7 +2,15 @@
 	stepChange: function (component, event, helper) {
 		console.log("stepChanged");
 		component.find("stepRec").reloadRecord();
-		helper.loadPopovers(component);
+		if (component.get("v.trialFields.Video_Watched__c")){
+			helper.loadPopovers(component);
+
+			//fire an event to let everyone know that it's open?
+			var msg = $A.get("e.ltng:sendMessage");
+			console.log("message:"); console.log(msg);
+			msg.setParams({"message" : "CurrentTaskOpened", "channel" : "trialMessages"});
+			msg.fire();
+		}
 	},
 
 	fullReload: function (component, event, helper) {
@@ -24,6 +32,7 @@
 	},
 
 	doInit: function (component, event, helper) {
+
 		var action = component.get("c.getTrialActivityId");
 		action.setStorable();
 		action.setCallback(this, function (a) {
@@ -39,12 +48,7 @@
 		});
 		$A.enqueueAction(action);
 
-		//fire an event to let everyone know that it's open
 
-		var msg = $A.get("e.ltng:sendMessage");
-		console.log("message:"); console.log(msg);
-		msg.setParams({"message" : "CurrentTaskOpened", "channel" : "trialMessages"});
-		msg.fire();
 
 	},
 

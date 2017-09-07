@@ -3,8 +3,10 @@
 	<aura:attribute name="methodName" type="string" required="true" access="public"/>
 	<aura:attribute name="refreshAction" type="object" required="false" access="public"/>
 	<aura:attribute name="completed" type="boolean" default="false" access="public"/>
+	<aura:attribute name="closeURL" type="string" access="public" required="false"/>
 
 	<c:LightningErrorHandler aura:id="leh"/>
+	<aura:handler event="aura:locationChange" action="{!c.locationChange}"/>
 
 	<aura:if isTrue="{!!v.completed}">
 		<lightning:button label="Check my work" onclick="{!c.check}" variant="brand" />

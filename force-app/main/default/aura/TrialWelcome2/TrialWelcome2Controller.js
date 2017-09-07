@@ -1,5 +1,5 @@
 ({
-	updateRecord : function(component, event) {
+	updateRecord : function(component) {
 		console.log("child component update succeeded");
 
 		component.find("trialRecE").saveRecord(
@@ -25,7 +25,8 @@
 		component.set("v.trialFieldsE."+field, !component.get("v.trialFieldsE."+field));
 	},
 
-	storySet : function(component, event, helper) {
+	//after you've done your orientation story
+	storySet : function(component) {
 		component.set("v.trialFieldsE.Video_Watched__c", true);
 		//close the modal that we're in
 
@@ -47,6 +48,7 @@
 	},
 
 	doInit : function(component) {
+
 		var action = component.get("c.getTrialActivityId");
 		action.setStorable();
 		action.setCallback(this, function(a){

@@ -9,6 +9,7 @@
     <navType>Standard</navType>
     <tab>Trial_Activity__c</tab>
     <tab>Path_Activity__c</tab>
+    <tab>Walkthrough__c</tab>
     <uiType>Lightning</uiType>
     <utilityBar>MetaApp_UtilityBar</utilityBar>
 </CustomApplication>

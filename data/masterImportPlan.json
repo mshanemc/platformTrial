@@ -24,14 +24,6 @@
         ]
     },
     {
-        "sobject": "Path_Activity__c",
-        "saveRefs": true,
-        "resolveRefs": false,
-        "files": [
-            "Path_Activity__cs.json"
-        ]
-    },
-    {
         "sobject": "Trial_Activity__c",
         "saveRefs": true,
         "resolveRefs": false,

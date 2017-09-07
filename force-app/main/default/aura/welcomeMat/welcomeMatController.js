@@ -1,7 +1,6 @@
 ({
-    doInit : function(component, event, helper) {
+    doInit : function(component) {
 
-        helper.setPopovers(component);
         $A.createComponent(
             "c:TrialWelcome2",
             {},
