@@ -1,7 +1,10 @@
 ({
 	stepChange: function (component, event, helper) {
 		console.log("stepChanged");
+		console.log(component.get("v.trialFields"));
 		component.find("stepRec").reloadRecord();
+		console.log(component.get("v.stepFields"));
+
 		if (component.get("v.trialFields.Video_Watched__c")){
 			helper.loadPopovers(component);
 
@@ -38,9 +41,14 @@
 		action.setCallback(this, function (a) {
 			var state = a.getState();
 			if (state === "SUCCESS") {
+				console.log(a.getReturnValue());
 				var rec = component.find("trialRec");
 				rec.set("v.recordId", a.getReturnValue());
 				rec.reloadRecord();
+
+				// var rec2 = component.find("stepRec");
+				// rec2.set("v.recordId", a.getReturnValue());
+				// rec2.reloadRecord();
 
 			} else if (state === "ERROR") {
 				console.log(a.getError());

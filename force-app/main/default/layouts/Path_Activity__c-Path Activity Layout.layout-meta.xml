@@ -19,6 +19,10 @@
                 <behavior>Edit</behavior>
                 <field>Assigned__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Close_URL__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -130,8 +134,10 @@
     </layoutSections>
     <relatedLists>
         <fields>NAME</fields>
-        <fields>Sequence__c</fields>
         <fields>Header__c</fields>
+        <fields>Completed__c</fields>
+        <fields>Sequence__c</fields>
+        <fields>Active__c</fields>
         <fields>Selector__c</fields>
         <fields>BodyText__c</fields>
         <relatedList>Walkthrough__c.Activity__c</relatedList>
@@ -144,7 +150,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h9A000000FGIR</masterLabel>
+        <masterLabel>00h9A000000NP8N</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

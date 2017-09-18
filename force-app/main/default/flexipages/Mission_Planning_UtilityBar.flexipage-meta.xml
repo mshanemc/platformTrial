@@ -5,7 +5,7 @@
             <componentInstanceProperties>
                 <name>eager</name>
                 <type>decorator</type>
-                <value>false</value>
+                <value>true</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>height</name>

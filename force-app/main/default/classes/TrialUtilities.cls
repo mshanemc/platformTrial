@@ -6,6 +6,11 @@ public with sharing class TrialUtilities {
 	}
 
 	@AuraEnabled
+	public static void nextTask(){
+		StepTests.nextTask();
+	}
+
+	@AuraEnabled
 	public static string getTrialActivityId(){
 		Trial_Activity__c TA = [select id, Current_Step__c from Trial_Activity__c][0];
 		//if there isn't a current step, we'll set it to the default one

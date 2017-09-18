@@ -14,9 +14,7 @@
 
 	<force:recordData fields="['Paths_Chosen__c', 'WelcomeViewed__c', 'Video_Watched__c', 'Current_Step__c']" mode="VIEW" targetFields="{!v.trialFields}" aura:id="trialRec" targetError="{!v.error}" recordUpdated="{!c.stepChange}"/>
 
-	<aura:if isTrue="{!v.trialFields.Current_Step__c}">
-		<force:recordData recordId="{!v.trialFields.Current_Step__c}" mode="VIEW" targetFields="{!v.stepFields}" aura:id="stepRec" fields="['Id', 'Description__c', 'Trailhead_Content__c', 'Close_URL__c', 'Mobile_Demo_URL__c', 'testMethod__c', 'How_Built_URL__c', 'How_To_URL__c','Name', 'Requirements__c', 'Value__c', 'Completed__c', 'Path_Sequence__c']" targetError="{!v.stepError}"/>
-	</aura:if>
+	<force:recordData recordId="{!v.trialFields.Current_Step__c}" mode="VIEW" targetFields="{!v.stepFields}" aura:id="stepRec" fields="['Id', 'Description__c', 'Trailhead_Content__c', 'Close_URL__c', 'Mobile_Demo_URL__c', 'testMethod__c', 'How_Built_URL__c', 'How_To_URL__c','Name', 'Requirements__c', 'Value__c', 'Completed__c', 'Path_Sequence__c']" targetError="{!v.stepError}"/>
 
 	<aura:if isTrue="{!v.trialFields.Video_Watched__c}">
 

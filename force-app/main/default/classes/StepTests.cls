@@ -143,12 +143,14 @@ public with sharing class StepTests {
 	}
 
 
-	private static void nextTask(){
+	public static void nextTask(){
 		Trial_Activity__c ta = [select id, Current_Step__c from Trial_Activity__c];
 
 		Path_Activity__c paNow = [select id, Completed__c, Path_Sequence__c, Path_Name__c from Path_Activity__c where id =:ta.Current_Step__c];
-		paNow.Completed__c = true;
-		update paNow;
+		if (paNow != null){
+			paNow.Completed__c = true;
+			update paNow;
+		}
 
 		list<Path_Activity__c> paNext = [select id, Path_Sequence__c, Path_Name__c
 			from Path_Activity__c

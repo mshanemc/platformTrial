@@ -29,17 +29,19 @@
 	storySet : function(component) {
 		component.set("v.trialFieldsE.Video_Watched__c", true);
 		//close the modal that we're in
+		console.log(component.get("v.trialFieldsE"));
 
 		component.find("trialRecE").saveRecord(
 			$A.getCallback(function(saveResult){
-				//console.log(saveResult);
+				console.log(saveResult);
 				if (saveResult.state === "SUCCESS"){
 					//happy logic here
 					component.find("trialRecE").reloadRecord();
-					component.find("overlayLibModal").notifyClose();
+					//component.find("overlayLibModal").notifyClose();
 				} else if (saveResult.state === "INCOMPLETE") {
 					console.log("User is offline, device doesn't support drafts.");
 				} else if (saveResult.state === "ERROR"){
+					console.log(saveResult.getError());
 					component.find("leh").passErrors(saveResult.error);
 				}
 			})

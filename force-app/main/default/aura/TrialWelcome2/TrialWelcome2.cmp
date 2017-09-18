@@ -8,10 +8,11 @@
 	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
 
 	<aura:attribute name="recordId" type="id"/>
+	<c:LightningErrorHandler aura:id="leh"/>
 
 	<force:recordData fields="['Paths_Chosen__c', 'WelcomeViewed__c', 'Video_Watched__c']" mode="VIEW" targetFields="{!v.trialFields}" aura:id="trialRec" targetError="{!v.error}"/>
 
-	<force:recordData mode="EDIT" targetFields="{!v.trialFieldsE}" aura:id="trialRecE" fields="['Path_See_Apps__c', 'Path_Build_Apps__c', 'Path_IT_Tools__c', 'Path_Mobile__c']" targetError="{!v.errorE}"/>
+	<force:recordData mode="EDIT" targetFields="{!v.trialFieldsE}" aura:id="trialRecE" fields="['Paths_Chosen__c', 'Video_Watched__c', 'WelcomeViewed__c', 'Path_See_Apps__c', 'Path_Build_Apps__c', 'Path_IT_Tools__c', 'Path_Mobile__c']" targetError="{!v.errorE}"/>
 
 	<lightning:overlayLibrary aura:id="overlayLibModal"/>
   <!-- welcome message -->
