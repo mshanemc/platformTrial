@@ -1,0 +1,6 @@
+assign-permset: true
+permset-name: TrialAdmin
+execute-apex:
+  - SetupScripting/apexDeletions
+data-import :
+  - data/masterImportPlan.json
