@@ -8,7 +8,6 @@ sfdx force:user:create -f config/userDef/codey-user-def.json
 sfdx msm:user:photo -f assets/cloudy_lightning.png -l Cloudy
 sfdx msm:user:photo -f assets/codey_lightning.png  -l CodeBear
 
-
 sfdx force:apex:execute -f SetupScripting/apexDeletions.cls
 sfdx force:data:tree:import -p data/masterImportPlan.json
 sfdx force:apex:execute -f SetupScripting/urlSetup.cls
