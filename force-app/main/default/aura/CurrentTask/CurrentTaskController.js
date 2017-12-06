@@ -1,28 +1,34 @@
 ({
 	stepChange: function (component, event, helper) {
-		console.log("stepChanged");
+		console.log("trial Rec changed..." + event.getParams().changeType);
 		console.log(component.get("v.trialFields"));
+
+		// load the dependent step record
 		component.find("stepRec").reloadRecord();
+		// reload the editable version of the trial
+		component.find("trialRecE").reloadRecord();
+		// load the editable step record
+		component.find("stepRecE").reloadRecord();
 		console.log(component.get("v.stepFields"));
 
-		if (component.get("v.trialFields.Video_Watched__c")){
-			helper.loadPopovers(component);
+	},
 
-			//fire an event to let everyone know that it's open?
-			var msg = $A.get("e.ltng:sendMessage");
-			console.log("message:"); console.log(msg);
-			msg.setParams({"message" : "CurrentTaskOpened", "channel" : "trialMessages"});
-			msg.fire();
+	stepLoaded : function(component, event, helper) {
+		if (event.getParams().changeType === 'LOADED'){
+			console.log('step loaded');
+
+			component.find("utilitybar").openUtility();
+			let match = helper.urlCheck(component); // see if there's a close_url goal for this new step and whether we're already on it.  :)
+
+
+			if (!match && component.get("v.trialFields.Paths_Chosen__c") && component.get("v.trialFields.Current_Step__c")) {
+				helper.loadPopovers(component);
+			}
 		}
 	},
 
-	fullReload: function (component, event, helper) {
-		console.log("fullReload");
-		component.find("trialRec").reloadRecord();
-		component.find("stepRec").reloadRecord();
-	},
 
-	vid: function (component, event, helper) {
+	vid: function (component, event) {
 		console.log(event.getSource().get("v.value"));
 		var nav = $A.get("e.force:navigateToComponent");
 		nav.setParams({
@@ -34,7 +40,7 @@
 		nav.fire();
 	},
 
-	doInit: function (component, event, helper) {
+	doInit: function (component) {
 
 		var action = component.get("c.getTrialActivityId");
 		action.setStorable();
@@ -46,9 +52,9 @@
 				rec.set("v.recordId", a.getReturnValue());
 				rec.reloadRecord();
 
-				// var rec2 = component.find("stepRec");
-				// rec2.set("v.recordId", a.getReturnValue());
-				// rec2.reloadRecord();
+				var rec2 = component.find("trialRecE");
+				rec2.set("v.recordId", a.getReturnValue());
+				rec2.reloadRecord();
 
 			} else if (state === "ERROR") {
 				console.log(a.getError());
@@ -57,7 +63,16 @@
 		$A.enqueueAction(action);
 
 
-
 	},
+
+	//manual check from pushing the button
+	check: function (component, event, helper) {
+		helper.checkHelper(component);
+	},
+
+	locationChange: function (component, event, helper) {
+		helper.urlCheck(component);
+	},
+
 
 })

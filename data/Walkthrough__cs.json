@@ -5,18 +5,69 @@
                 "type": "Walkthrough__c",
                 "referenceId": "Walkthrough__cRef1"
             },
-            "Active__c": false,
-            "Activity__c": "@Path_Activity__cRef1",
+            "Active__c": true,
+            "Activity__c": "@Path_Activity__cRef2",
             "BodyText__c": "<p>The App Launcher (waffle menu) lets you switch between apps in Salesforce. Open it and click the <b>Mission Planning</b> app</p>",
-            "Completed__c": true,
-            "CSS__c": "slds-popover,slds-popover_walkthrough,slds-nubbin_left,no-pointer,cPopoverManager",
-            "Header__c": "App Launcher",
+            "Completed__c": false,
+            "CSS__c": "slds-popover,slds-popover_walkthrough,slds-nubbin_left-top,no-pointer",
             "Next_Button_Label__c": "Next",
             "Selector__c": "div.slds-icon-waffle",
             "Sequence__c": 1,
-            "Show_Close_Button__c": false,
+            "Show_Close_Button__c": true,
             "Show_Next_Button__c": false,
             "Name": "Waffle Menu"
+        },
+        {
+            "attributes": {
+                "type": "Walkthrough__c",
+                "referenceId": "Walkthrough__cRef2"
+            },
+            "Active__c": true,
+            "Activity__c": "@Path_Activity__cRef5",
+            "BodyText__c": "<p>Tabs make navigation simple. Tabs with dropdowns show recently used records and lists</p>",
+            "Completed__c": false,
+            "CSS__c": "slds-popover,slds-popover_walkthrough,slds-nubbin_left,no-pointer",
+            "Next_Button_Label__c": "Next",
+            "Selector__c": "nav.slds-context-bar__secondary.navCenter ul li:first-of-type",
+            "Sequence__c": 1,
+            "Show_Close_Button__c": false,
+            "Show_Next_Button__c": true,
+            "Name": "Navigation Tabs"
+        },
+        {
+            "attributes": {
+                "type": "Walkthrough__c",
+                "referenceId": "Walkthrough__cRef3"
+            },
+            "Active__c": true,
+            "Activity__c": "@Path_Activity__cRef5",
+            "BodyText__c": "<p>Search lets you see quickly find anything in Salesforce (records, files, discussions) and supports advanced search syntax and misspellings.</p>",
+            "Completed__c": false,
+            "CSS__c": "slds-popover,slds-popover_walkthrough,slds-nubbin_left-top,no-pointer",
+            "Next_Button_Label__c": "Next",
+            "Selector__c": "div.slds-global-header__item.slds-global-header__item--search",
+            "Sequence__c": 2,
+            "Show_Close_Button__c": true,
+            "Show_Next_Button__c": false,
+            "Name": "Search"
+        },
+        {
+            "attributes": {
+                "type": "Walkthrough__c",
+                "referenceId": "Walkthrough__cRef4"
+            },
+            "Active__c": true,
+            "Activity__c": "@Path_Activity__cRef1",
+            "BodyText__c": "<p>Related lists show you records in another object (Mission) that relate to the object you're looking at (Account).</p>",
+            "Completed__c": false,
+            "CSS__c": "slds-popover,slds-popover_walkthrough,slds-nubbin_left,no-pointer",
+            "Selector__c": "div.container.forceRelatedListSingleContainer:nth-of-type(2)",
+            "Sequence__c": 1,
+            "Show_Close_Button__c": true,
+            "Show_Next_Button__c": false,
+            "Name": "Related Lists"
         }
     ]
 }
+
+

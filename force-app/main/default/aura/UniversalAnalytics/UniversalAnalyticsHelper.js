@@ -24,7 +24,7 @@
 		action.setBackground();
 		action.setCallback(this, function(a){
 			if (a.getState() === "SUCCESS") {
-				console.log(a.getReturnValue());
+				// console.log(a.getReturnValue());
 			}  else if (a.getState() === "ERROR") {
 				console.log(a.getError());
 			}

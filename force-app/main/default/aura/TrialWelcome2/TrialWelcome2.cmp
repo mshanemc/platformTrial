@@ -10,31 +10,52 @@
 	<aura:attribute name="recordId" type="id"/>
 	<c:LightningErrorHandler aura:id="leh"/>
 
-	<force:recordData fields="['Paths_Chosen__c', 'WelcomeViewed__c', 'Video_Watched__c']" mode="VIEW" targetFields="{!v.trialFields}" aura:id="trialRec" targetError="{!v.error}"/>
+	<force:recordData fields="['Paths_Chosen__c', 'WelcomeViewed__c', 'Video_Watched__c', 'Current_Step__c']" mode="VIEW" targetFields="{!v.trialFields}" aura:id="trialRec" targetError="{!v.error}"/>
 
-	<force:recordData mode="EDIT" targetFields="{!v.trialFieldsE}" aura:id="trialRecE" fields="['Paths_Chosen__c', 'Video_Watched__c', 'WelcomeViewed__c', 'Path_See_Apps__c', 'Path_Build_Apps__c', 'Path_IT_Tools__c', 'Path_Mobile__c']" targetError="{!v.errorE}"/>
+	<force:recordData mode="EDIT" targetFields="{!v.trialFieldsE}" aura:id="trialRecE" fields="['Paths_Chosen__c', 'Video_Watched__c', 'WelcomeViewed__c', 'Path_See_Apps__c', 'Path_Build_Apps__c', 'Path_IT_Tools__c', 'Path_Mobile__c', 'Current_Step__c']" targetError="{!v.errorE}"/>
 
 	<lightning:overlayLibrary aura:id="overlayLibModal"/>
   <!-- welcome message -->
 	<aura:if isTrue="{!and(v.trialFields, !v.trialFields.WelcomeViewed__c)}">
-		<lightning:layout horizontalAlign="center" verticalAlign="center" class="background" multipleRows="true" pullToBoundary="large">
-			<lightning:layoutItem flexibility="auto" size="10" padding="around-large">
+		<lightning:layout horizontalAlign="space" verticalAlign="center" class="background" multipleRows="true" pullToBoundary="large">
+			<lightning:layoutItem size="6" padding="around-large">
+				<h1 class="slds-text-heading_large slds-m-bottom_large">Welcome to the Salesforce Platform Free Trial</h1>
 
-				<h1 class="slds-text-heading_large slds-m-bottom--large">Welcome to the Salesorce Platform Free Trial</h1>
+				<!-- <p class="slds-text-heading_small slds-m-vertical_medium">Please watch this orientation video to get you started.</p> -->
 
-				<p class="slds-text-heading_medium slds-m-bottom--medium" >Whether you're new to Salesforce, or just looking to see what you can do beyond CRM (Sales and Service), you've come to the right place.</p>
-
-				<p class="slds-text-heading_medium slds-m-bottom--medium" >You received an email with your username and the link to set your password.  You can use that to come back anytime, as well as to login to check out Salesforce on your phone (more on that later).</p>
-
-				<p class="slds-text-heading_medium slds-m-bottom--medium" >Ready to get started?</p>
-
-				<lightning:layout class="slds-m-top--xx-large">
-					<lightning:layoutItem size="3">
-						<c:ValueSettingButton variant="neutral" label="Yes" value="true" recordId="{!v.recordId}" field="WelcomeViewed__c" valueType="boolean" class="slds-button_huge"/>
-					</lightning:layoutItem>
-				</lightning:layout>
+				<p class="slds-text-heading_medium slds-m-vertical_medium">
+					Meet the SuperRangers! We're a team of superheroes working to protect the world from the bad guys.
+				</p>
+				<p class="slds-text-heading_medium slds-m-vertical_medium">
+					Like any organization, there's always more work than there is time, so we use Salesforce keep everyone connected and moving
+					in the same direction. Salesforce helps us track high-level contacts, plan missions, and organize equipment, as well non-heroic
+					things like getting questions answered and coordinating our volunteer activities.
+				</p>
+				<p class="slds-text-heading_medium slds-m-vertical_medium">
+					The Avengers poached our last Salesforce expert, so we're really glad you've stepped in to help us out.
+				</p>
+				<p class="slds-text-heading_medium slds-m-vertical_medium">
+					We'll take you on a tour of how we use Salesforce and what we've built. Your mission, should you choose to accept it, is
+					to make saving the world easier.
+				</p>
 
 			</lightning:layoutItem>
+			<lightning:layoutItem size="4" padding="around-large">
+				<img src="http://via.placeholder.com/600x600" />
+			</lightning:layoutItem>
+			<lightning:layoutItem size="3">
+				<lightning:button variant="neutral" label="Let's go!" class="slds-button_huge" onclick="{!c.storySet}" />
+				<!-- <c:ValueSettingButton variant="neutral" label="I read it.  I'm in!" value="true" recordId="{!v.recordId}" field="Video_Watched__c" valueType="boolean" class="slds-button_huge"/> -->
+			</lightning:layoutItem>
+
+
+			<!-- <lightning:layoutItem size="2"/>
+					<lightning:layoutItem size="4" padding="around-large">
+						<c:ValueSettingButton variant="neutral" label="I read it.  I'm in!" value="true" recordId="{!v.recordId}" field="Video_Watched__c" valueType="boolean" class="slds-button_huge"/>
+					</lightning:layoutItem>
+					<lightning:layoutItem size="10" padding="around-large">
+						<c:youtubeVideoComponent videoId="OsC_zMcStro" startTime="35"/>
+					</lightning:layoutItem> -->
 		</lightning:layout>
 
 		<c:UniversalAnalyticsPageTag pageName="/welcome/welcome" pageTitle="welcome"/>
@@ -44,15 +65,16 @@
 	<aura:if isTrue="{!and(v.trialFields, and(v.trialFields.WelcomeViewed__c, !v.trialFields.Paths_Chosen__c))}">
 		<lightning:layout horizontalAlign="space" verticalAlign="center" class="background" multipleRows="true" pullToBoundary="large">
 			<lightning:layoutItem flexibility="auto" size="7" padding="around-large">
-				<h1 class="slds-text-heading_large slds-m-bottom--large">What would you like to see?</h1>
+				<h1 class="slds-text-heading_large slds-m-bottom_large">What would you like to see?</h1>
 
-				<p class="slds-text-heading_medium slds-m-bottom--medium" >Click all that apply.  We'll make sure that your tour focuses on those items. </p>
+				<p class="slds-text-heading_medium slds-m-bottom_medium" >Click all that apply.  We'll make sure that your tour focuses on those items. </p>
 
 
 			</lightning:layoutItem>
 			<lightning:layoutItem flexibility="auto" size="2" padding="around-large">
 				<aura:if isTrue="{!or(or(v.trialFieldsE.Path_See_Apps__c, v.trialFieldsE.Path_Mobile__c), v.trialFieldsE.Path_Build_Apps__c)}">
-					<c:ValueSettingButton variant="neutral" label="Next" value="true" recordId="{!v.recordId}" field="Paths_Chosen__c" valueType="boolean" class="slds-button_huge"/>
+						<lightning:button variant="neutral" label="Next!" class="slds-button_huge" onclick="{!c.pathsSet}" />
+					<!-- <c:ValueSettingButton variant="neutral" label="Next" value="true" recordId="{!v.recordId}" field="Paths_Chosen__c" valueType="boolean" class="slds-button_huge"/> -->
 				</aura:if>
 			</lightning:layoutItem>
 
@@ -104,12 +126,12 @@
 	</aura:if>
 
 	<!-- story setup-->
-	<aura:if isTrue="{!and(v.trialFields, and(v.trialFields.Paths_Chosen__c, !v.trialFields.Video_Watched__c))}">
+	<!-- <aura:if isTrue="{!and(v.trialFields, and(v.trialFields.Paths_Chosen__c, !v.trialFields.Video_Watched__c))}">
 		<lightning:layout horizontalAlign="space" verticalAlign="center" class="background" multipleRows="true" pullToBoundary="large">
 			<lightning:layoutItem size="6" padding="around-large">
-				<h1 class="slds-text-heading_large slds-m-bottom--large">Orientation</h1>
+				<h1 class="slds-text-heading_large slds-m-bottom_large">Orientation</h1>
 
-				<!-- <p class="slds-text-heading_small slds-m-vertical_medium">Please watch this orientation video to get you started.</p> -->
+				<p class="slds-text-heading_small slds-m-vertical_medium">Please watch this orientation video to get you started.</p>
 
 				<p class="slds-text-heading_medium slds-m-vertical_medium">
 					Welcome to the SuperRangers!  We're a team of superheroes working to protect the world from the bad guys.
@@ -130,34 +152,34 @@
 			</lightning:layoutItem>
 			<lightning:layoutItem size="3">
 				<lightning:button variant="neutral" label="I read it.  I'm in!" class="slds-button_huge" onclick="{!c.storySet}"/>
-				<!-- <c:ValueSettingButton variant="neutral" label="I read it.  I'm in!" value="true" recordId="{!v.recordId}" field="Video_Watched__c" valueType="boolean" class="slds-button_huge"/> -->
+				<c:ValueSettingButton variant="neutral" label="I read it.  I'm in!" value="true" recordId="{!v.recordId}" field="Video_Watched__c" valueType="boolean" class="slds-button_huge"/>
 			</lightning:layoutItem>
 
 
-			<!-- <lightning:layoutItem size="2"/>
+			<lightning:layoutItem size="2"/>
 			<lightning:layoutItem size="4" padding="around-large">
 				<c:ValueSettingButton variant="neutral" label="I read it.  I'm in!" value="true" recordId="{!v.recordId}" field="Video_Watched__c" valueType="boolean" class="slds-button_huge"/>
 			</lightning:layoutItem>
 			<lightning:layoutItem size="10" padding="around-large">
 				<c:youtubeVideoComponent videoId="OsC_zMcStro" startTime="35"/>
-			</lightning:layoutItem> -->
+			</lightning:layoutItem>
 		</lightning:layout>
 
 		<c:UniversalAnalyticsPageTag pageName="/welcome/orientationVideo" pageTitle="orientationVideo"/>
 
-	</aura:if>
+	</aura:if> -->
 
-	<aura:if isTrue="{!and(v.trialFields, v.trialFields.Video_Watched__c)}">
+	<!-- <aura:if isTrue="{!and(v.trialFields, v.trialFields.Video_Watched__c)}">
 		<lightning:layout class="background" horizontalAlign="space" verticalAlign="center" >
 			<lightning:layoutItem>
-				<h1 class="slds-text-heading_large slds-m-bottom--large">placeholder</h1>
+				<h1 class="slds-text-heading_large slds-m-bottom_large">placeholder</h1>
 			</lightning:layoutItem>
 		</lightning:layout>
 
 
 		<c:UniversalAnalyticsPageTag pageName="/welcome/ready" pageTitle="ready"/>
 
-	</aura:if>
+	</aura:if> -->
 
 	<aura:if isTrue="{!v.recordId}">
 		<c:UniversalAnalytics aura:id="wua" location="welcome"/>

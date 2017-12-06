@@ -15,3 +15,7 @@ sfdx force:data:tree:export -d data -p -q "select name, Description__c, End__c, 
 
 ## knowledge articles
 sfdx force:data:tree:export -d data -p -q "select id, Question__c, Answer__c, Summary, Title, UrlName, IsVisibleInApp, PublishStatus, Language from FAQ__kav"
+
+
+
+## The Salesforce Platform includes accounts and contacts, so you can build apps around the same customers that your sales and service people interact with. No silos!

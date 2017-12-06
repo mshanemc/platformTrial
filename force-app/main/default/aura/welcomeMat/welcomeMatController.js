@@ -9,10 +9,10 @@
                     component.find("overlayLib").showCustomModal({
                         body : content,
                         cssClass: "slds-modal_large",
-                        showCloseButton: false,
-                        closeCallback: function() {
-                            component.find("pom").startPopovers();
-                        }
+                        showCloseButton: false//,
+                        // closeCallback: function() {
+                        //     component.find("pom").startPopovers();
+                        // }
                     });
                 }
             }

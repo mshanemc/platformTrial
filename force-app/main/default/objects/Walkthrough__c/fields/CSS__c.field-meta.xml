@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>CSS__c</fullName>
-    <defaultValue>"slds-popover,slds-popover_walkthrough,slds-nubbin_left,no-pointer,cWelcomeMat"</defaultValue>
+    <defaultValue>"slds-popover,slds-popover_walkthrough,slds-nubbin_left,no-pointer"</defaultValue>
     <description>css that should be applied to the popover.</description>
     <externalId>false</externalId>
     <inlineHelpText>css that should be applied to the popover.</inlineHelpText>

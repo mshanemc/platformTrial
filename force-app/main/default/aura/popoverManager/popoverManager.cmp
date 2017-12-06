@@ -4,7 +4,9 @@
 	<aura:attribute name="startOnInit" type="boolean" default="true" access="public" required="false"/>
 	<aura:attribute name="activePopover" type="integer" default="-1"/>
 
+
 	<aura:method name="startPopovers" action="{!c.go}" description="start with the first popover already loaded"/>
+	<aura:method name="emptyPopovers" action="{!c.empty}" description="remove existing popovers" />
 	<aura:method name="addPopovers" action="{!c.add}" description="append more popovers to the end whatever is already there">
 		<aura:attribute name="newPopovers" type="object[]"/>
 	</aura:method>

@@ -1,8 +1,0 @@
-scratch-org-def: config/project-scratch-def.json
-assign-permset: true
-permset-name: TrialAdmin
-execute-apex:
-  - SetupScripting/apexDeletions.cls
-data-import :
-  - data/masterImportPlan.json
-show-scratch-org-url: true
