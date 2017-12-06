@@ -27,7 +27,7 @@
             window.setTimeout($A.getCallback(function (){
                 console.log('executing delay');
                 self.hitPopover(component);
-            }), 2000);
+            }), 1000);
         } else {
             self.hitPopover(component);
         }
@@ -63,6 +63,7 @@
         console.log('creating popover with ' + cssClass);
         console.log(component.get("v.activePopover"));
 
+
         $A.createComponent(
             "c:walkthroughNode",
             {
@@ -78,7 +79,20 @@
                         //always add the component's name, with letter after c capitalized, so CSS works
                         referenceSelector: current.Selector__c,
                         cssClass: cssClass
-                    });
+                    }).then(function (popover){
+                        console.log(popover);
+                        // the following is not part of the real API for this and should not be used for real apps
+                        let elements;
+                        if (popover._panelInstance.elements){ //regular mode
+                            elements = popover._panelInstance.elements;
+                        } else if (popover._panelInstance.$allElements$){
+                            elements = popover._panelInstance.$allElements$ //debug mode
+                        }
+                        console.log(elements[0].style);
+                        setTimeout(() => {
+                            elements[0].style.setProperty('transform', `translate(${current.OffsetX__c || 0}px,${current.OffsetY__c || 0}px)`);
+                        }, 150);
+                    })
                 }
             }
         )

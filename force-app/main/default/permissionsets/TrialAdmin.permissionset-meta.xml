@@ -290,6 +290,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Walkthrough__c.OffsetX__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Walkthrough__c.OffsetY__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Walkthrough__c.Open_on_RecordId__c</field>
         <readable>true</readable>
     </fieldPermissions>

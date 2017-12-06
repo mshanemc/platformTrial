@@ -32,7 +32,7 @@ public with sharing class TrialUtilities {
 
 	@AuraEnabled
 	public static list<Walkthrough__c> getWalkthroughsByActivity(id activityId){
-		return [select Id, Name, BodyText__c, CSS__c, Header__c, Open_on_RecordId__c, Open_on_URL__c,
+		return [select Id, Name, BodyText__c, CSS__c, Header__c, Open_on_RecordId__c, Open_on_URL__c, OffsetX__c, OffsetY__c,
 			Next_Button_Action_Override__c, Next_Button_Label__c, Selector__c, Sequence__c, Show_Close_Button__c, Show_Next_Button__c, Close_Message__c
 			from Walkthrough__c
 			where Activity__c =: activityId and Completed__c = false and Active__c=true
@@ -41,7 +41,7 @@ public with sharing class TrialUtilities {
 
 	@AuraEnabled
 	public static list<Walkthrough__c> getWalkthroughsByGrouping(string manualGrouping){
-		return [select Id, Name, BodyText__c, CSS__c, Header__c, Open_on_RecordId__c, Open_on_URL__c,
+		return [select Id, Name, BodyText__c, CSS__c, Header__c, Open_on_RecordId__c, Open_on_URL__c, OffsetX__c, OffsetY__c,
 			Next_Button_Action_Override__c, Next_Button_Label__c, Selector__c, Sequence__c, Show_Close_Button__c, Show_Next_Button__c, Close_Message__c
 			from Walkthrough__c
 			where Manual_Grouping__c =: manualGrouping and Completed__c = false and Active__c=true
@@ -49,7 +49,7 @@ public with sharing class TrialUtilities {
 	}
 
 
-		public static final string MissionName = 'E.V.I.L. HQ Raid';
+	public static final string MissionName = 'E.V.I.L. HQ Raid';
 	//public static final	id articleId = 'ka0f4000000dJfoAAE';
 	public static final string targetCity = 'City of San Francisco';
 
