@@ -15,6 +15,8 @@
             "Sequence__c": 1,
             "Show_Close_Button__c": true,
             "Show_Next_Button__c": false,
+            "OffsetX__c" : 10,
+            "OffsetY__c": 10,
             "Name": "Waffle Menu"
         },
         {
@@ -26,12 +28,14 @@
             "Activity__c": "@Path_Activity__cRef5",
             "BodyText__c": "<p>Tabs make navigation simple. Tabs with dropdowns show recently used records and lists</p>",
             "Completed__c": false,
-            "CSS__c": "slds-popover,slds-popover_walkthrough,slds-nubbin_left,no-pointer",
+            "CSS__c": "slds-popover,slds-popover_walkthrough,slds-nubbin_left-top,no-pointer",
             "Next_Button_Label__c": "Next",
             "Selector__c": "nav.slds-context-bar__secondary.navCenter ul li:first-of-type",
             "Sequence__c": 1,
             "Show_Close_Button__c": false,
             "Show_Next_Button__c": true,
+            "OffsetX__c": 13,
+            "OffsetY__c": 20,
             "Name": "Navigation Tabs"
         },
         {
@@ -66,6 +70,60 @@
             "Show_Close_Button__c": true,
             "Show_Next_Button__c": false,
             "Name": "Related Lists"
+        },
+        {
+            "attributes": {
+                "type": "Walkthrough__c",
+                "referenceId": "Walkthrough__cRef5"
+            },
+            "Active__c": true,
+            "Activity__c": "@Path_Activity__cRef10",
+            "BodyText__c": "<p>Custom Actions show up as buttons that make it easy for users to just update what they need to, on desktop or phone.</p>",
+            "Completed__c": false,
+            "CSS__c": "slds-popover,slds-popover_walkthrough,slds-nubbin_top,no-pointer",
+            "Selector__c": "div[title=\"Assign Hero\"]",
+            "Sequence__c": 1,
+            "Show_Close_Button__c": true,
+            "Show_Next_Button__c": false,
+            "OffsetX__c": -50,
+            "OffsetY__c": 65,
+            "Name": "Custom Actions"
+        },
+        {
+            "attributes": {
+                "type": "Walkthrough__c",
+                "referenceId": "Walkthrough__cRef6"
+            },
+            "Active__c": true,
+            "Activity__c": "@Path_Activity__cRef4",
+            "BodyText__c": "<p>Lightning Components are created by developers, but configured and arranged on the page without code using Lightning App Builder.</p>",
+            "Completed__c": false,
+            "CSS__c": "slds-popover,slds-popover_walkthrough,slds-nubbin_bottom,no-pointer",
+            "Selector__c": "article.slds-card.cEquipmentPicker",
+            "Sequence__c": 1,
+            "Show_Close_Button__c": false,
+            "Show_Next_Button__c": true,
+            "OffsetX__c": -70,
+            "OffsetY__c": -266,
+            "Name": "Lightning Components"
+        },
+        {
+            "attributes": {
+                "type": "Walkthrough__c",
+                "referenceId": "Walkthrough__cRef7"
+            },
+            "Active__c": true,
+            "Activity__c": "@Path_Activity__cRef4",
+            "BodyText__c": "<p>Salesforce lets professional developers can focus on small, reusable components that make a big impact for users.</p>",
+            "Completed__c": false,
+            "CSS__c": "slds-popover,slds-popover_walkthrough,slds-nubbin_bottom,no-pointer",
+            "Selector__c": "article.slds-card.cEquipmentPicker",
+            "Sequence__c": 2,
+            "Show_Close_Button__c": true,
+            "Show_Next_Button__c": false,
+            "OffsetX__c": -70,
+            "OffsetY__c": -266,
+            "Name": "Lightning Components 2"
         }
     ]
 }
