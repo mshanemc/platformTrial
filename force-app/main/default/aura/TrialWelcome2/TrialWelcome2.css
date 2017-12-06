@@ -1,5 +1,5 @@
 .THIS.background{
-	background-image:url('/resource/lakeWithRoad?isdtp=p1');
+	background-image:url('https://raw.githubusercontent.com/mshanemc/platformTrial/master/assets/introBackground.png');
 	min-height: 75vh;
 	margin: -0.75rem;
 	background-repeat: no-repeat;
