@@ -24,19 +24,13 @@
 				<!-- <p class="slds-text-heading_small slds-m-vertical_medium">Please watch this orientation video to get you started.</p> -->
 
 				<p class="slds-text-heading_medium slds-m-vertical_medium">
-					Meet the SuperRangers! We're a team of superheroes working to protect the world from the bad guys.
+					 They're a team of superheroes working to protect the world from the bad guys.
 				</p>
 				<p class="slds-text-heading_medium slds-m-vertical_medium">
-					Like any organization, there's always more work than there is time, so we use Salesforce keep everyone connected and moving
-					in the same direction. Salesforce helps us track high-level contacts, plan missions, and organize equipment, as well non-heroic
-					things like getting questions answered and coordinating our volunteer activities.
+					 Like every great organization, the SuperRangers want to spend more time focused on what they do best. They'd rather be out fighting crime than filling out orders for new grappling hooks, lasers and utility belts.
 				</p>
 				<p class="slds-text-heading_medium slds-m-vertical_medium">
-					The Avengers poached our last Salesforce expert, so we're really glad you've stepped in to help us out.
-				</p>
-				<p class="slds-text-heading_medium slds-m-vertical_medium">
-					We'll take you on a tour of how we use Salesforce and what we've built. Your mission, should you choose to accept it, is
-					to make saving the world easier.
+					In this trial you'll join the SuperRangers team and see how they've customized Salesforce to their unique needs. Your mission, should you choose to accept it, is to make saving the world easier. You can also explore the tools and technology of the Salesforce Platform on your own.
 				</p>
 
 			</lightning:layoutItem>
