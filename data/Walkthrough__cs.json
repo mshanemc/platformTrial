@@ -7,7 +7,7 @@
             },
             "Active__c": true,
             "Activity__c": "@Path_Activity__cRef2",
-            "BodyText__c": "<p>The App Launcher (waffle menu) lets you switch between apps in Salesforce. Open it and click the <b>Mission Planning</b> app</p>",
+            "BodyText__c": "<p>The App Launcher (waffle menu) lets you switch between apps in Salesforce. Open it to reveal a full list of custom apps, then click on the <b>Mission Planning</b> App",
             "Completed__c": false,
             "CSS__c": "slds-popover,slds-popover_walkthrough,slds-nubbin_left-top,no-pointer",
             "Next_Button_Label__c": "Next",
