@@ -4,6 +4,7 @@
 	margin: -0.75rem;
 	background-repeat: no-repeat;
 	background-size: 100% 120%;
+	background-position: bottom;
 }
 
 .THIS {
@@ -15,7 +16,6 @@
 	color:rgb(22, 50, 92);
 	min-height: 40vh;
 	border : rgba(119, 74, 6, 0) 10px solid;
-	background-position: bottom;
 
 }
 
