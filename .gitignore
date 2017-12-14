@@ -4,6 +4,7 @@ PlatformTrial.sublime-workspace
 
 .classpath
 .DS_Store
+**/.DS_Store
 .sfdx
 .project
 .salesforce
@@ -13,3 +14,4 @@ node_modules
 .settings
 selenium-client-jars/
 test/artifacts
+
