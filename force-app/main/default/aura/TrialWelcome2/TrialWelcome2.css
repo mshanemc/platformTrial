@@ -20,7 +20,7 @@
 
 .THIS .selection_box.selected{
 	background-color: rgba(255, 255, 255, 1);
-	border : rgb(119, 74, 6) 10px solid;
+	/* border : rgb(0, 112, 210) 10px solid; */
 }
 
 .THIS .selection_box p {
