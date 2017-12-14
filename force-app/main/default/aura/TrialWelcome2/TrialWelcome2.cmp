@@ -35,7 +35,7 @@
 
 			</lightning:layoutItem>
 			<lightning:layoutItem size="4" padding="around-large">
-				<img src="http://via.placeholder.com/600x600" />
+				<img src="https://raw.githubusercontent.com/mshanemc/platformTrial/master/assets/welcome-image.png" />
 			</lightning:layoutItem>
 			<lightning:layoutItem size="3">
 				<lightning:button variant="neutral" label="Let's go!" class="slds-button_huge" onclick="{!c.storySet}" />
