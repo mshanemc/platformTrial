@@ -88,13 +88,13 @@
                 "type": "Path_Activity__c",
                 "referenceId": "Path_Activity__cRef6"
             },
-            "Name": "Visualize Mission Planning",
+            "Name": "Customize Your App With Lightning App Builder and Components",
             "Assigned__c": false,
             "Active__c": true,
-            "Description__c": "<p>There&#39;s a lot to mission planning. Let&#39;s make it clearer where we are in the process.</p>",
+            "Description__c": "<p>The Salesforce Platform allows our heroes to build apps without any code. Let&#39;s go behind the scenes into the setup and administatin screen to see how Trailblazers can build and customize apps with Lightning Components.</p>",
             "Path_Name__c": "Build Apps",
             "Path_Sequence__c": 20,
-            "Requirements__c": "<ol><li>Click <a href=\"https://www.appbuilder.com\" target=\"_blank\">here</a> to open App Builder in a new window (normally you&#39;d click the gear icon in the top right and &quot;Edit Page&quot;, but sometimes it&#39;s handy to have your instructions in a separate window!).</li><li>In the left panel, find the <b>Path</b> component and drag it into the header (just below the helicopter icon)</li><li>Click the <b>Save</b> button in the top right</li><li>Refresh the page to see your Path</li></ol>",
+            "Requirements__c": "<ol><li>Click <a href=\"https://www.appbuilder.com\" target=\"_blank\">here</a> to open App Builder in a new window (normally you&#39;d click the gear icon in the top right and &quot;Edit Page&quot;, but sometimes it&#39;s handy to have your instructions in a separate window!).</li><li>In the left panel are lightning components (reusable blocks of code) Salesforce offers for you to customize the app.</li><li>Find the <b>Path</b> component and drag it into the header (just below the helicopter icon)</li><li>Click the <b>Save</b> button in the top right</li><li>Return to this page and refresh your browser to see the path component you've added go live</li></ol>",
             "testMethod__c": "noTest",
             "Trailhead_Content__c": "<p><a href=\"https://trailhead.salesforce.com/en/modules/sales_admin_optimize_salesforce_for_selling/units/sales_admin_optimize_for_selling_unit_1\" target=\"_blank\">Path Configuration</a></p><p><a href=\"https://trailhead.salesforce.com/en/modules/lightning_app_builder/units/lightning_app_builder_recordpage\" target=\"_blank\">Custom Record Pages in App Builder</a></p>",
             "Value__c": "<p>AppBuilder lets you add standard components, <a href=\"https://appexchange.salesforce.com/components\" target=\"_blank\">components</a> from the <a href=\"https://appexchange.salesforce.com/\" target=\"_blank\">Salesforce AppExchange</a>, or custom components built by your developers.</p>"
@@ -104,13 +104,13 @@
                 "type": "Path_Activity__c",
                 "referenceId": "Path_Activity__cRef7"
             },
-            "Name": "Automate Mission Status",
+            "Name": "Automate Mission Status With Process Builder",
             "Assigned__c": false,
             "Active__c": true,
             "Description__c": "<p>Sometimes we forget to update statuses on our missions. Let&#39;s say that if you&#39;re adding heroes and equipment to a mission, but it&#39;s still in &quot;<b>Requested</b>&quot; status, that the system just automatically moves it to &quot;<b>Planning</b>&quot; status</p>",
             "Path_Name__c": "Build Apps",
             "Path_Sequence__c": 40,
-            "Requirements__c": "<ol><li>open <a href=\"/one/one.app#/setup/ProcessAutomation/home\" target=\"_blank\">Process Builder</a> (through setup or via link)</li><li>select the process called <b>Mission Automation (Trial Task)</b></li><li>under <b>Immediate Actions</b> click + <b>Add Action</b></li><li>set the type to <b>Update Records</b></li><li>give the action any name you like</li><li><b>Record Type</b> should be <b>Select the Mission__c record that started your process</b></li><li>set the field <b>Status </b>to be the picklist value <b>Planning</b></li><li><b>Save </b>the action and <b>Activate</b> the process (top right)</li></ol>",
+            "Requirements__c": "<ol><li>open <a href=\"/one/one.app#/setup/ProcessAutomation/home\" target=\"_blank\">Process Builder</a> (through setup or via link)</li><li>select the process called <b>Mission Automation (Trial Task)</b></li><li>under <b>Immediate Actions</b> click + <b>Add Action</b></li><li>set the type to <b>Update Records</b></li><li>give the action a name like <b>Automatic status update</b></li><li><b>Record Type</b> should be <b>Select the Mission__c record that started your process</b></li><li>Select <b>status</b> from the field dropdown, then select <b>Planning</b> from the value dropdown</li><li><b>Save </b>the action</li><li><b>Activate</b> the process with the button in the top right</li></ol>",
             "testMethod__c": "noTest",
             "Trailhead_Content__c": "<ul><li><a href=\"https://trailhead.salesforce.com/en/projects/quickstart-process-builder/steps/quickstart-process-builder1\" target=\"_blank\">Process Builder Quick Start</a></li><li><a href=\"https://trailhead.salesforce.com/en/modules/business_process_automation/units/process_builder\" target=\"_blank\">Process Automation</a></li></ul>",
             "Value__c": "<p>Process Builder automates field updates, notifications via email or chatter, creates records, and can even start other processes, flows, approvals, or execute custom code.</p>"
@@ -135,10 +135,10 @@
                 "type": "Path_Activity__c",
                 "referenceId": "Path_Activity__cRef9"
             },
-            "Name": "Complete",
+            "Name": "Congratulations! You've Completed the Mission!",
             "Assigned__c": false,
             "Active__c": true,
-            "Description__c": "<p><b>You&#39;ve completed our trial trail</b>!  Thanks for taking the time to do that.  </p><p><br></p><p>If you have any questions or feedback, please use the feedback button to share.  </p><p><br></p><p>And if you haven&#39;t yet, be sure to give <a href=\"https://trailhead.salesforce.com/\" target=\"_blank\">Trailhead</a> a try.  You can learn all the fun things you can do with our platform--from advanced process automations to code and integration.</p>",
+            "Description__c": "<p>You're all finished with our Salesforce Platform free trial.</p><p><br></p><p>There&#39;s tons more app building tools for you to explore in the <b>Setup</b> menu in the upper right. You can explore on your own or head over to Trailhead where hundreds of trails can take you on guided learning journeys through Salesforce.</p><p>If you have any questions or feedback, please use the feedback button to share.  </p>",
             "Path_Sequence__c": 100
         },
         {
@@ -152,7 +152,7 @@
             "Description__c": "<p>Let&#39;s start planning our mission.</p>",
             "Path_Name__c": "See Apps",
             "Path_Sequence__c": 16,
-            "Requirements__c": "<p>Assign any 2 heroes to the mission. Since you&#39;re new, I&#39;d recommend Cloudy and CodeBear.</p>",
+            "Requirements__c": "<p>Assign any 2 heroes to the mission. Since you&#39;re new, I&#39;d recommend Cloudy and CodeBear.</p><p>Click <b>save</b> after selecting each hero</p>",
             "testMethod__c": "checkHeroes",
             "Trailhead_Content__c": "<p><a href=\"https://trailhead.salesforce.com/en/modules/lex_customization/units/lex_customization_actions\" target=\"_blank\">Lightning Quick Actions</a></p>",
             "Value__c": "<p>Custom Actions, like the one created for &quot;Assign Heroes&quot; can help make it easy for your end users to do their work.</p>"

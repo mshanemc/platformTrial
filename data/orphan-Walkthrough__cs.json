@@ -3,24 +3,6 @@
         {
             "attributes": {
                 "type": "Walkthrough__c",
-                "referenceId": "Walkthrough__cRef1"
-            },
-            "Active__c": true,
-            "BodyText__c": "<p>Problem? Question? Suggestion? Rant? Let us know!</p>",
-            "Completed__c": false,
-            "CSS__c": "slds-popover,slds-popover_walkthrough,slds-nubbin_left-bottom,no-pointer,cPopoverManager",
-            "Header__c": "Give Feedback",
-            "Manual_Grouping__c": "intro",
-            "Next_Button_Label__c": "Next",
-            "Selector__c": "li.slds-utility-bar__item:nth-of-type(2)",
-            "Sequence__c": 1,
-            "Show_Close_Button__c": true,
-            "Show_Next_Button__c": true,
-            "Name": "Feedback"
-        },
-        {
-            "attributes": {
-                "type": "Walkthrough__c",
                 "referenceId": "Walkthrough__cRef2"
             },
             "Active__c": true,
