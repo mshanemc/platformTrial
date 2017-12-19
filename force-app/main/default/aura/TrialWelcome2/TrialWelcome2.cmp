@@ -24,16 +24,16 @@
 				<!-- <p class="slds-text-heading_small slds-m-vertical_medium">Please watch this orientation video to get you started.</p> -->
 
 				<p class="slds-text-heading_medium slds-m-vertical_medium">
-					 They're a team of superheroes working to protect the world from the bad guys.
+					 Meet the Salesforce SuperRangers! They're a team of superheroes working to protect the world from the bad guys.
 				</p>
 				<p class="slds-text-heading_medium slds-m-vertical_medium">
-					 Like every great organization, the SuperRangers want to spend more time focused on what they do best. They'd rather be out fighting crime than filling out orders for new grappling hooks, lasers and utility belts.
+					They'd rather be out fighting crime than working in the office filling out orders for new grappling hooks, lasers and utility belts.
 				</p>
 				<p class="slds-text-heading_medium slds-m-vertical_medium">
-					In this trial you'll join the SuperRangers team and see how they've customized Salesforce to their unique needs. Your mission, should you choose to accept it, is to make saving the world easier. You can also explore the tools and technology of the Salesforce Platform on your own.
+					In this trial you'll join the SuperRangers team and see how they've customized Salesforce to their unique needs. Your mission, should you choose to accept it, is to make saving the world easier.
 				</p>
-
 			</lightning:layoutItem>
+
 			<lightning:layoutItem size="4" padding="around-large">
 				<img src="https://raw.githubusercontent.com/mshanemc/platformTrial/master/assets/welcome-image.png" />
 			</lightning:layoutItem>
