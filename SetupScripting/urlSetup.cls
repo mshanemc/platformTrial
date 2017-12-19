@@ -21,7 +21,7 @@ string appBuilderUrl = '/visualEditor/appBuilder.app?pageId=Mission_Record_Page&
 string oldURL = 'https://www.appbuilder.com';
 system.debug(appBuilderUrl);
 
-list<Path_Activity__c> PAList = [select id, Requirements__c from Path_Activity__c where Name = 'Visualize Mission Planning'];
+list<Path_Activity__c> PAList = [select id, Requirements__c from Path_Activity__c where Name = 'Customize Your App With Lightning App Builder and Components'];
 system.debug(PAList[0].Requirements__c);
 PAList[0].Requirements__c = PAList[0].Requirements__c.replace(oldURL, appBuilderUrl);
 

@@ -152,7 +152,7 @@
             "Description__c": "<p>Let&#39;s start planning our mission.</p>",
             "Path_Name__c": "See Apps",
             "Path_Sequence__c": 16,
-            "Requirements__c": "<p>Assign any 2 heroes to the mission. Since you&#39;re new, I&#39;d recommend Cloudy and CodeBear.</p><p>Click <b>save</b> after selecting each hero</p>",
+            "Requirements__c": "<p>Assign any 2 heroes to the mission. Since you&#39;re new, I&#39;d recommend Cloudy and CodeBear.</p><p>Click <b>Save</b> after selecting each hero</p>",
             "testMethod__c": "checkHeroes",
             "Trailhead_Content__c": "<p><a href=\"https://trailhead.salesforce.com/en/modules/lex_customization/units/lex_customization_actions\" target=\"_blank\">Lightning Quick Actions</a></p>",
             "Value__c": "<p>Custom Actions, like the one created for &quot;Assign Heroes&quot; can help make it easy for your end users to do their work.</p>"

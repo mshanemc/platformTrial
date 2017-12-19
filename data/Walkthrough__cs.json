@@ -139,7 +139,7 @@
             "Selector__c": "li.slds-utility-bar__item:nth-of-type(2)",
             "Sequence__c": 1,
             "Show_Close_Button__c": true,
-            "Show_Next_Button__c": true,
+            "Show_Next_Button__c": false,
             "Name": "Feedback"
         }
     ]
