@@ -25,7 +25,7 @@
             "Close_URL__c": "/sObject/Mission__c/list",
             "Assigned__c": false,
             "Active__c": true,
-            "Description__c": "<p>The SuperRangers use a custom app to manage their missions, assignments, and equipment. Let&#39;s take a look.</p>",
+            "Description__c": "<p>The SuperRangers have access to multiple apps on Salesofrce and use a custom app to manage their missions, assignments, and equipment. Let's take a look. Let&#39;s take a look.</p>",
             "How_To_URL__c": "vnjKGY1iLok",
             "Mobile_Demo_URL__c": "mTLOjRzaXP4",
             "Path_Name__c": "See Apps",
@@ -33,7 +33,7 @@
             "Requirements__c": "<p>Click the App Launcher</p><p>Notice the apps in the launcher</p><p>Open the Mission Planning App</p>",
             "testMethod__c": "noTest",
             "Trailhead_Content__c": "<p><a href=\"https://trailhead.salesforce.com/en/modules/lex_implementation_basics/units/lex_implementation_basics_welcome\" target=\"_blank\">CRM Basics</a></p><p><a href=\"https://trailhead.salesforce.com/en/modules/starting_force_com/units/starting_intro\" target=\"_blank\">Platform Basics</a></p>",
-            "Value__c": "<p>Every company can build custom apps around their customers and, not just for sales and service.</p><p><br></p><p>The SuperRangers have built apps that help them manage all kinds of business processes.</p>"
+            "Value__c": "<p>Every company can build custom apps around their customers for any role and department, not just sales and service.</p>"
         },
         {
             "attributes": {
