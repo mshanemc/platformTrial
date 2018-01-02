@@ -8,6 +8,10 @@
         <application>Mission_Planning</application>
         <visible>true</visible>
     </applicationVisibilities>
+    <applicationVisibilities>
+        <application>Volunteering</application>
+        <visible>true</visible>
+    </applicationVisibilities>
     <fieldPermissions>
         <editable>true</editable>
         <field>Assignment__c.Hero__c</field>
