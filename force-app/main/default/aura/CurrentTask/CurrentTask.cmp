@@ -25,6 +25,8 @@
 	<force:recordData aura:id="stepRecE" mode="EDIT" recordId="{!v.trialFields.Current_Step__c}" targetFields="{!v.stepFieldsE}" layoutType="FULL"/>
 	<aura:attribute name="stepFieldsE" type="Object"/>
 
+	<lightning:overlayLibrary aura:id="gifModal" />
+
 
 
 
@@ -60,11 +62,11 @@
 					</aura:if>
 				</aura:if>
 
-				<!-- <aura:if isTrue="{!v.stepFields.How_To_URL__c}">
-					<lightning:button variant="neutral" label="Show me (desktop)" onclick="{!c.vid}" value="How_To_URL__c"/>
+				<aura:if isTrue="{!v.stepFields.How_To_URL__c}">
+					<lightning:button variant="neutral" label="Show me how" onclick="{!c.vid}" value="How_To_URL__c"/>
 				</aura:if>
 
-				<aura:if isTrue="{!v.stepFields.Mobile_Demo_URL__c}">
+				<!-- <aura:if isTrue="{!v.stepFields.Mobile_Demo_URL__c}">
 					<lightning:button variant="neutral" label="Show me (phone)" onclick="{!c.vid}" value="Mobile_Demo_URL__c"/>
 				</aura:if>
 

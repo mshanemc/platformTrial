@@ -1,5 +1,5 @@
 ({
-	stepChange: function (component, event, helper) {
+	stepChange: function (component, event) {
 		console.log("trial Rec changed..." + event.getParams().changeType);
 		console.log(component.get("v.trialFields"));
 
@@ -29,15 +29,28 @@
 
 
 	vid: function (component, event) {
-		console.log(event.getSource().get("v.value"));
-		var nav = $A.get("e.force:navigateToComponent");
-		nav.setParams({
-			componentDef: "c:youtubeVideoComponent",
-			componentAttributes: {
-				videoId: component.get("v.stepFields." + event.getSource().get("v.value"))
+		$A.createComponent(
+			"c:gifModal",
+			{ "gifurl": component.get("v.stepFields." + event.getSource().get("v.value"))},
+			function (content, status) {
+				if (status === "SUCCESS") {
+					component.find("gifModal").showCustomModal({
+						body: content,
+						cssClass: "slds-modal_large",
+						showCloseButton: true
+					});
+				}
 			}
-		});
-		nav.fire();
+		);
+		// console.log(event.getSource().get("v.value"));
+		// var nav = $A.get("e.force:navigateToComponent");
+		// nav.setParams({
+		// 	componentDef: "c:youtubeVideoComponent",
+		// 	componentAttributes: {
+		// 		videoId: component.get("v.stepFields." + event.getSource().get("v.value"))
+		// 	}
+		// });
+		// nav.fire();
 	},
 
 	doInit: function (component) {

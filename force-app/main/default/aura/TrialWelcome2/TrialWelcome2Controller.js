@@ -1,5 +1,5 @@
 ({
-	doneYet : function(component, event, helper) {
+	doneYet : function(component, event) {
 		// check on load
 		console.log('checking loaded record');
 		console.log(event.getParams().changeType);

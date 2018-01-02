@@ -437,8 +437,4 @@
         <tab>Walkthrough__c</tab>
         <visibility>Visible</visibility>
     </tabSettings>
-    <tabSettings>
-        <tab>Welcome</tab>
-        <visibility>Visible</visibility>
-    </tabSettings>
 </PermissionSet>
