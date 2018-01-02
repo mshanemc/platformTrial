@@ -1,6 +1,9 @@
 #!/bin/bash
+echo 'Creating a scratch org'
 sfdx force:org:create -s -f config/project-scratch-def.json -d 1
+echo 'Pushing source to the scratch org'
 sfdx force:source:push
+
 sfdx force:user:permset:assign -n TrialAdmin
 
 sfdx force:user:create -f config/userDef/cloudy-user-def.json && sfdx msm:user:photo -f assets/cloudy-profile.png -l Cloudy &

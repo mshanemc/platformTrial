@@ -10,7 +10,7 @@
 	<aura:attribute name="recordId" type="id"/>
 	<c:LightningErrorHandler aura:id="leh"/>
 
-	<force:recordData fields="['Paths_Chosen__c', 'WelcomeViewed__c', 'Video_Watched__c', 'Current_Step__c']" mode="VIEW" targetFields="{!v.trialFields}" aura:id="trialRec" targetError="{!v.error}"/>
+	<force:recordData fields="['Paths_Chosen__c', 'WelcomeViewed__c', 'Video_Watched__c', 'Current_Step__c']" mode="VIEW" targetFields="{!v.trialFields}" aura:id="trialRec" targetError="{!v.error}" recordUpdated="{!c.doneYet}"/>
 
 	<force:recordData mode="EDIT" targetFields="{!v.trialFieldsE}" aura:id="trialRecE" fields="['Paths_Chosen__c', 'Video_Watched__c', 'WelcomeViewed__c', 'Path_See_Apps__c', 'Path_Build_Apps__c', 'Path_IT_Tools__c', 'Path_Mobile__c', 'Current_Step__c']" targetError="{!v.errorE}"/>
 
@@ -119,6 +119,7 @@
 		<c:UniversalAnalyticsPageTag pageName="/welcome/choosePath" pageTitle="choosePath"/>
 	</aura:if>
 
+
 	<!-- story setup-->
 	<!-- <aura:if isTrue="{!and(v.trialFields, and(v.trialFields.Paths_Chosen__c, !v.trialFields.Video_Watched__c))}">
 		<lightning:layout horizontalAlign="space" verticalAlign="center" class="background" multipleRows="true" pullToBoundary="large">
@@ -174,6 +175,28 @@
 		<c:UniversalAnalyticsPageTag pageName="/welcome/ready" pageTitle="ready"/>
 
 	</aura:if> -->
+
+	<!--default content if you've already completed the intro-->
+	<!-- <aura:if isTrue="{!and(v.trialFields, and(v.trialFields.WelcomeViewed__c, v.trialFields.Paths_Chosen__c))}">
+		<lightning:layout horizontalAlign="space" verticalAlign="center" class="background" multipleRows="true" pullToBoundary="large">
+			<lightning:layoutItem size="6" padding="around-large">
+				<p class="slds-text-heading_medium slds-m-vertical_medium">
+					Looks like you've already completed the Platform Trial Welcome
+				</p>
+				<p class="slds-text-heading_medium slds-m-vertical_medium">
+					Look under Current Task to see what to do next, or, if you're done, try exploring
+				</p>
+				<p class="slds-text-heading_medium slds-m-vertical_medium">
+					<ul class="slds-list_dotted">
+						<li>Other apps in the app launcher</li>
+						<li>The Setup menu (under the gear in the top right)</li>
+						<li><a href="https://trailhead.salesforce.com/">Trailhead</a></li>
+					</ul>
+				</p>
+			</lightning:layoutItem>
+		</lightning:layout>
+	</aura:if> -->
+
 
 	<aura:if isTrue="{!v.recordId}">
 		<c:UniversalAnalytics aura:id="wua" location="welcome"/>

@@ -1,4 +1,17 @@
 ({
+	doneYet : function(component, event, helper) {
+		// check on load
+		console.log('checking loaded record');
+		console.log(event.getParams().changeType);
+		if (event.getParams().changeType === "LOADED"){
+			console.log('record loaded');
+			console.log(component.get("v.trialFields"));
+			if (component.get("v.trialFields.Video_Watched__c") && component.get("v.trialFields.WelcomeViewed__c")){
+				component.find("overlayLibModal").notifyClose();
+			}
+		}
+	},
+
 	updateRecord : function(component) {
 		console.log("child component update succeeded");
 
