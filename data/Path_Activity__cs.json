@@ -26,8 +26,6 @@
             "Assigned__c": false,
             "Active__c": true,
             "Description__c": "<p>The SuperRangers have access to multiple apps on Salesofrce and use a custom app to manage their missions, assignments, and equipment. Let's take a look. Let&#39;s take a look.</p>",
-            "How_To_URL__c": "vnjKGY1iLok",
-            "Mobile_Demo_URL__c": "mTLOjRzaXP4",
             "Path_Name__c": "See Apps",
             "Path_Sequence__c": 1,
             "Requirements__c": "<p>Click the App Launcher</p><p>Notice the apps in the launcher</p><p>Open the Mission Planning App</p>",
@@ -96,6 +94,7 @@
             "Path_Sequence__c": 20,
             "Requirements__c": "<ol><li>Click <a href=\"https://www.appbuilder.com\" target=\"_blank\">here</a> to open App Builder in a new window (normally you&#39;d click the gear icon in the top right and &quot;Edit Page&quot;, but sometimes it&#39;s handy to have your instructions in a separate window!).</li><li>In the left panel are lightning components (reusable blocks of code) Salesforce offers for you to customize the app.</li><li>Find the <b>Path</b> component and drag it into the header (just below the helicopter icon)</li><li>Click the <b>Save</b> button in the top right</li><li>Return to this page and refresh your browser to see the path component you've added go live</li></ol>",
             "testMethod__c": "noTest",
+            "How_To_URL__c": "https://raw.githubusercontent.com/mshanemc/platformTrial/spring18/assets/PathDemo.gif",
             "Trailhead_Content__c": "<p><a href=\"https://trailhead.salesforce.com/en/modules/sales_admin_optimize_salesforce_for_selling/units/sales_admin_optimize_for_selling_unit_1\" target=\"_blank\">Path Configuration</a></p><p><a href=\"https://trailhead.salesforce.com/en/modules/lightning_app_builder/units/lightning_app_builder_recordpage\" target=\"_blank\">Custom Record Pages in App Builder</a></p>",
             "Value__c": "<p>AppBuilder lets you add standard components, <a href=\"https://appexchange.salesforce.com/components\" target=\"_blank\">components</a> from the <a href=\"https://appexchange.salesforce.com/\" target=\"_blank\">Salesforce AppExchange</a>, or custom components built by your developers.</p>"
         },
@@ -138,7 +137,7 @@
             "Name": "Congratulations! You've Completed the Mission!",
             "Assigned__c": false,
             "Active__c": true,
-            "Description__c": "<p>You're all finished with our Salesforce Platform free trial.</p><p><br></p><p>There&#39;s tons more app building tools for you to explore in the <b>Setup</b> menu in the upper right. You can explore on your own or head over to Trailhead where hundreds of trails can take you on guided learning journeys through Salesforce.</p><p>If you have any questions or feedback, please use the feedback button to share.  </p>",
+            "Description__c": "<p>You're all finished with our Salesforce Platform free trial.</p><p><br></p><p>There&#39;s tons more app building tools for you to explore in the <b>Setup</b> menu in the upper right.</p><br><p>You can explore on your own or head over to Trailhead where hundreds of trails can take you on guided learning journeys through Salesforce.</p><br><p>If you have any questions or feedback, please use the feedback button to share.</p>",
             "Path_Sequence__c": 100
         },
         {

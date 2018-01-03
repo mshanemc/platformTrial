@@ -86,7 +86,7 @@
             "Show_Close_Button__c": true,
             "Show_Next_Button__c": false,
             "OffsetX__c": -50,
-            "OffsetY__c": 65,
+            "OffsetY__c": 85,
             "Name": "Custom Actions"
         },
         {
