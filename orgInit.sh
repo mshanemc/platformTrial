@@ -5,7 +5,7 @@ echo 'Pushing source to the scratch org'
 sfdx force:source:push
 
 sfdx force:user:permset:assign -n TrialAdmin
-sfdx force:user:permset:assign -n Referrals && sfdx force:data:tree:import -f data/Referral__c.json &
+sfdx force:user:permset:assign -n Referrals && sfdx force:data:bulk:upsert -f data/referrals.csv -s Referral__c -i Id -w 0 &
 
 sfdx force:user:create -f config/userDef/cloudy-user-def.json && sfdx msm:user:photo -f assets/cloudy-profile.png -l Cloudy &
 sfdx force:user:create -f config/userDef/codey-user-def.json && sfdx msm:user:photo -f assets/codey-profile.png  -l CodeBear &
