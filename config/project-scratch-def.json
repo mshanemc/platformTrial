@@ -2,9 +2,9 @@
     "orgName": "platform-trial",
     "edition": "Developer",
     "orgPreferences" : {
-        "enabled": ["S1DesktopEnabled", "ChatterEnabled", "OfflineDraftsEnabled", "PathAssistantsEnabled", "NetworksEnabled"]
+        "enabled": ["S1DesktopEnabled", "ChatterEnabled", "OfflineDraftsEnabled", "PathAssistantsEnabled", "NetworksEnabled" ]
     },
     "features": [
-        "Communities"
+        "Communities", "SiteDotCom", "Sites"
     ]
 }
