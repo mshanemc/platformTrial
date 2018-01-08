@@ -6,6 +6,7 @@
     <formFactors>Large</formFactors>
     <label>Recruiting</label>
     <navType>Standard</navType>
+    <tab>standard-home</tab>
     <tab>Referral__c</tab>
     <tab>Jobs__x</tab>
     <tab>standard-Feed</tab>
