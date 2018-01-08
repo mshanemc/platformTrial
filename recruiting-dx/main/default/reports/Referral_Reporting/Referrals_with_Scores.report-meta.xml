@@ -9,11 +9,13 @@
             <axisBinding>y</axisBinding>
             <column>Referral__c.Scores1__r$Score__c</column>
         </chartSummaries>
-        <chartType>HorizontalBar</chartType>
+        <chartType>HorizontalBarGrouped</chartType>
         <enableHoverLabels>false</enableHoverLabels>
         <expandOthers>true</expandOthers>
-        <groupingColumn>Referral__c.Scores1__r$Attribute__c</groupingColumn>
+        <groupingColumn>Referral__c$Name</groupingColumn>
+        <legendPosition>Right</legendPosition>
         <location>CHART_TOP</location>
+        <secondaryGroupingColumn>Referral__c.Scores1__r$Attribute__c</secondaryGroupingColumn>
         <showAxisLabels>true</showAxisLabels>
         <showPercentage>false</showPercentage>
         <showTotal>false</showTotal>
