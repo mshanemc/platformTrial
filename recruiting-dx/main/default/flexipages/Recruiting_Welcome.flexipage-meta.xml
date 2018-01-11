@@ -11,7 +11,7 @@
                 <value>The recruiting app lets employees submit referrals for jobs.&lt;br />
 &lt;br />
 &lt;b>Jobs tab&lt;/b>&lt;br />
-Connects to an external system where jobs are stored using&amp;nbsp;&lt;b>Salesforce Connect&lt;/b>.&amp;nbsp; &lt;a href="https://trailhead.salesforce.com/en/modules/lightning_connect">Learn more about connect on Trailhead&lt;/a>&lt;br />
+Connects to an external system where jobs are stored using &lt;b>Salesforce Connect&lt;/b>. &lt;a href="https://trailhead.salesforce.com/en/modules/lightning_connect">Learn more about connect on Trailhead&lt;/a>&lt;br />
 &lt;br />
 Click on any job to see the details from the external system.&lt;br />
 &lt;br />
@@ -21,37 +21,23 @@ While looking at a job, you can create a referral for that job by clicking the &
 There&amp;#39;s also a related list of referrals.&lt;br />
 &lt;br />
 &lt;b>Referrals tab&lt;/b>&lt;br />
-Tracks all the referrals submitted.&amp;nbsp;&lt;br />
+Tracks all the referrals submitted.&lt;br />
 &lt;br />
-Select&amp;nbsp;&lt;b>All&lt;/b>&amp;nbsp;from the list view, and be sure to try changing the view between list and Kanban to see the progress on each referral.&amp;nbsp;&lt;br />
+Select &lt;b>All&lt;/b> from the list view, and be sure to try changing the view between list and Kanban to see the progress on each referral.&lt;br />
 &lt;br />
 And you can drag referrals from one column to the next to update their status!&lt;br />
 &lt;br />
 &lt;b>Referral detail&lt;/b>&lt;br />
-Click on a referral to see the details.&amp;nbsp; You can see the Report Chart component in use displaying the scores for each candidate&lt;br />
-&lt;br />
-&amp;nbsp;</value>
+Click on a referral to see the details. You can see the Report Chart component in use displaying the scores for each candidate</value>
             </componentInstanceProperties>
             <componentName>flexipage:richText</componentName>
         </componentInstances>
-        <name>top</name>
+        <name>main</name>
         <type>Region</type>
     </flexiPageRegions>
-    <flexiPageRegions>
-        <name>bottomLeft</name>
-        <type>Region</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <name>bottomRight</name>
-        <type>Region</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <name>sidebar</name>
-        <type>Region</type>
-    </flexiPageRegions>
-    <masterLabel>Recruiting Home</masterLabel>
+    <masterLabel>Recruiting Welcome</masterLabel>
     <template>
-        <name>home:desktopTemplate</name>
+        <name>flexipage:defaultAppHomeTemplate</name>
     </template>
-    <type>HomePage</type>
+    <type>AppPage</type>
 </FlexiPage>
