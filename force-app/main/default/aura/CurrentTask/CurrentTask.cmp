@@ -83,7 +83,7 @@
 						</span>
 					</div>
 					<div class="slds-media__body">
-						<div class="slds-text-heading_small">Recommended Trailhead Content</div>
+						<div class="slds-text-heading_small">Learn more on Trailhead</div>
 						<ui:outputRichText value="{!v.stepFields.Trailhead_Content__c}"/>
 					</div>
 				</div>
