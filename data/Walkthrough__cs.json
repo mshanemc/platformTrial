@@ -78,7 +78,7 @@
             },
             "Active__c": true,
             "Activity__c": "@Path_Activity__cRef10",
-            "BodyText__c": "<p>Custom Actions show up as buttons that make it easy for users to just update what they need to, on desktop or phone.</p>",
+            "BodyText__c": "<p>Custom Action buttons can be assigned to specific objects or pages and makes it easy for users to update what they need, on desktop or phone.</p>",
             "Completed__c": false,
             "CSS__c": "slds-popover,slds-popover_walkthrough,slds-nubbin_top,no-pointer",
             "Selector__c": "div[title=\"Assign Hero\"]",
