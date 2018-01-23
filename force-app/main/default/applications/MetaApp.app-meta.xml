@@ -3,10 +3,11 @@
     <brand>
         <headerColor>#000000</headerColor>
     </brand>
-    <description>part of the trial used for managing the trial</description>
+    <description>Behind the scenes of the trial--tasks, paths, and walkthroughs</description>
     <formFactors>Large</formFactors>
-    <label>MetaApp</label>
+    <label>Trial Management</label>
     <navType>Standard</navType>
+    <tab>Welcome</tab>
     <tab>Trial_Activity__c</tab>
     <tab>Path_Activity__c</tab>
     <tab>Walkthrough__c</tab>

@@ -16,8 +16,6 @@
     <tab>standard-Dashboard</tab>
     <tab>standard-report</tab>
     <tab>standard-OtherUserProfile</tab>
-    <tab>Path_Activity__c</tab>
-    <tab>Trial_Activity__c</tab>
     <uiType>Lightning</uiType>
     <utilityBar>Mission_Planning_UtilityBar</utilityBar>
 </CustomApplication>

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
     <brand>
-        <headerColor>#0070D2</headerColor>
+        <headerColor>#DE607F</headerColor>
     </brand>
+    <description>Manage volunteer events that users can sign up for.</description>
     <formFactors>Large</formFactors>
     <label>Volunteering</label>
     <navType>Standard</navType>

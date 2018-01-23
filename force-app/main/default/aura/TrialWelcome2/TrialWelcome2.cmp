@@ -17,39 +17,42 @@
 	<lightning:overlayLibrary aura:id="overlayLibModal"/>
   <!-- welcome message -->
 	<aura:if isTrue="{!and(v.trialFields, !v.trialFields.WelcomeViewed__c)}">
-		<lightning:layout horizontalAlign="space" verticalAlign="center" class="background" multipleRows="true" pullToBoundary="large">
-			<lightning:layoutItem size="6" padding="around-large">
-				<h1 class="slds-text-heading_large slds-m-bottom_large">Welcome to the Salesforce Platform Free Trial</h1>
+
+		<lightning:layout horizontalAlign="spread" verticalAlign="stretch">
+
+			<lightning:layoutItem size="7" class="background">
+				<lightning:layout horizontalAlign="center" verticalAlign="stretch" class="fullHeight">
+					<lightning:layoutItem size="6" class="slds-align_absolute-center">
+						<img src="https://raw.githubusercontent.com/mshanemc/platformTrial/master/assets/welcome-image.png" />
+					</lightning:layoutItem>
+				</lightning:layout>
+			</lightning:layoutItem>
+
+			<lightning:layoutItem size="5" padding="around-medium">
+				<!-- <h1 class="slds-text-heading_large slds-m-bottom_large">Welcome to the Salesforce Platform Free Trial</h1> -->
 
 				<!-- <p class="slds-text-heading_small slds-m-vertical_medium">Please watch this orientation video to get you started.</p> -->
+				<lightning:layout verticalAlign="stretch" multipleRows="true" class="fullHeight">
 
-				<p class="slds-text-heading_medium slds-m-vertical_medium">
-					 Meet the Salesforce SuperRangers! They're a team of superheroes working to protect the world from the bad guys.
-				</p>
-				<p class="slds-text-heading_medium slds-m-vertical_medium">
-					They'd rather be out fighting crime than working in the office filling out orders for new grappling hooks, lasers and utility belts.
-				</p>
-				<p class="slds-text-heading_medium slds-m-vertical_medium">
-					In this trial you'll join the SuperRangers team and see how they've customized Salesforce to their unique needs. Your mission, should you choose to accept it, is to make saving the world easier.
-				</p>
-			</lightning:layoutItem>
-
-			<lightning:layoutItem size="4" padding="around-large">
-				<img src="https://raw.githubusercontent.com/mshanemc/platformTrial/master/assets/welcome-image.png" />
-			</lightning:layoutItem>
-			<lightning:layoutItem size="3">
-				<lightning:button variant="neutral" label="Let's go!" class="slds-button_huge" onclick="{!c.storySet}" />
-				<!-- <c:ValueSettingButton variant="neutral" label="I read it.  I'm in!" value="true" recordId="{!v.recordId}" field="Video_Watched__c" valueType="boolean" class="slds-button_huge"/> -->
-			</lightning:layoutItem>
-
-
-			<!-- <lightning:layoutItem size="2"/>
-					<lightning:layoutItem size="4" padding="around-large">
-						<c:ValueSettingButton variant="neutral" label="I read it.  I'm in!" value="true" recordId="{!v.recordId}" field="Video_Watched__c" valueType="boolean" class="slds-button_huge"/>
+					<lightning:layoutItem size="12" flexibility="no-flex">
+						<h1 class="slds-text-heading_medium"><b>Welcome to the Salesforce Platform Free Trial</b></h1>
 					</lightning:layoutItem>
-					<lightning:layoutItem size="10" padding="around-large">
-						<c:youtubeVideoComponent videoId="OsC_zMcStro" startTime="35"/>
-					</lightning:layoutItem> -->
+
+					<lightning:layoutItem size="12" flexibility="grow" class="slds-text-heading_medium">
+
+						<p class="slds-m-vertical_medium">Meet the Salesforce SuperRangers! They're a team of superheroes working to protect the world from the bad guys. </p>
+						<p class="slds-m-vertical_medium">They'd rather be out fighting crime than working in the office filling out orders for new grappling hooks, lasers and utility
+						belts.</p>
+						<p class="slds-m-vertical_medium">In this trial you'll join the SuperRangers team and see how they've customized Salesforce to their unique needs. Your mission,
+						should you choose to accept it, is to make saving the world easier.</p>
+					</lightning:layoutItem>
+
+					<lightning:layoutItem size="12" flexibility="no-flex" >
+						<lightning:button variant="brand" label="Let's go!" class="slds-button_huge" onclick="{!c.storySet}" />
+					</lightning:layoutItem>
+				</lightning:layout>
+			</lightning:layoutItem>
+
 		</lightning:layout>
 
 		<c:UniversalAnalyticsPageTag pageName="/welcome/welcome" pageTitle="welcome"/>
@@ -57,7 +60,57 @@
 
 	<!-- path selection -->
 	<aura:if isTrue="{!and(v.trialFields, and(v.trialFields.WelcomeViewed__c, !v.trialFields.Paths_Chosen__c))}">
-		<lightning:layout horizontalAlign="space" verticalAlign="center" class="background" multipleRows="true" pullToBoundary="large">
+
+		<h1 class="slds-text-heading_medium slds-m-top_xx-large slds-text-align_center"><b>What would you like to see?</b></h1>
+		<p class="slds-m-bottom_xx-large slds-text-align_center">Click all that apply. We'll make sure that your tour focuses on those items.</p>
+
+		<fieldset class="slds-form-element">
+			<div class="slds-form-element__control">
+				<div class="slds-visual-picker slds-visual-picker_medium">
+					<input type="checkbox" id="path_see" name="options" value="on" onchange="{!c.checkboxChange}"/>
+					<label for="path_see" >
+						<span class="slds-visual-picker__figure slds-visual-picker__icon slds-align_absolute-center">
+							<span class="slds-is-selected">
+								<lightning:icon iconName="action:check" variant="none" size="large"/>
+							</span>
+							<span class="slds-is-not-selected">
+								<!-- <lightning:icon iconName="action:close" variant="none" size="large" /> -->
+								<img src="https://raw.githubusercontent.com/mshanemc/platformTrial/33f3ee6e4c2487b6e76744bed573d3458f37c0fc/assets/Codey_lightning_laptop.png"/>
+							</span>
+						</span>
+						<span class="slds-visual-picker__body">
+							<h1 class="slds-text-heading_medium"><b>Apps in Action</b></h1>
+							<p>I want to see employees experience apps built on Salesforce</p>
+						</span>
+					</label>
+					<input type="checkbox" id="path_build" name="options" value="on" onchange="{!c.checkboxChange}"/>
+					<label for="path_build">
+						<span class="slds-visual-picker__figure slds-visual-picker__icon slds-align_absolute-center">
+							<span class="slds-is-selected">
+								<lightning:icon iconName="action:check" variant="none" size="large" />
+							</span>
+							<span class="slds-is-not-selected">
+								<!-- <lightning:icon iconName="action:close" variant="none" size="large" /> -->
+								<img src="https://raw.githubusercontent.com/mshanemc/platformTrial/33f3ee6e4c2487b6e76744bed573d3458f37c0fc/assets/Astro_lightning_welder.png"/>
+							</span>
+						</span>
+						<span class="slds-visual-picker__body">
+							<h1 class="slds-text-heading_medium"><b>App Building</b></h1>
+							<p>I want to see how administrators and developers build the apps</p>
+						</span>
+					</label>
+				</div>
+			</div>
+		</fieldset>
+
+
+		<lightning:layout horizontalAlign="end">
+			<lightning:layoutItem>
+				<lightning:button variant="brand" label="Next" onclick="{!c.pathsSet}" disabled="{!!or(v.trialFieldsE.Path_See_Apps__c, v.trialFieldsE.Path_See_Apps__c)}" />
+			</lightning:layoutItem>
+		</lightning:layout>
+
+		<!-- <lightning:layout horizontalAlign="space" verticalAlign="center" class="background" multipleRows="true" pullToBoundary="large">
 			<lightning:layoutItem flexibility="auto" size="7" padding="around-large">
 				<h1 class="slds-text-heading_large slds-m-bottom_large">What would you like to see?</h1>
 
@@ -68,7 +121,6 @@
 			<lightning:layoutItem flexibility="auto" size="2" padding="around-large">
 				<aura:if isTrue="{!or(or(v.trialFieldsE.Path_See_Apps__c, v.trialFieldsE.Path_Mobile__c), v.trialFieldsE.Path_Build_Apps__c)}">
 						<lightning:button variant="neutral" label="Next!" class="slds-button_huge" onclick="{!c.pathsSet}" />
-					<!-- <c:ValueSettingButton variant="neutral" label="Next" value="true" recordId="{!v.recordId}" field="Paths_Chosen__c" valueType="boolean" class="slds-button_huge"/> -->
 				</aura:if>
 			</lightning:layoutItem>
 
@@ -76,7 +128,6 @@
 				<div class="{!'selection_box slds-p-around_large' + if(v.trialFieldsE.Path_See_Apps__c, ' selected', '')}">
 					<h1 class="slds-text-heading_large slds-m-around_large slds-align_absolute-center">Apps in Action</h1>
 					<p class="slds-text-heading_medium slds-m-around_large slds-align_absolute-center">I want to see employees experience apps built on Salesforce</p>
-					<!-- <img src="http://via.placeholder.com/350x150"/> -->
 					<aura:if isTrue="{!!v.trialFieldsE.Path_See_Apps__c}">
 						<lightning:button label="Select" value="Path_See_Apps__c" onclick="{!c.select}" variant="brand" class="slds-align_absolute-center slds-button_huge"/>
 					</aura:if>
@@ -85,7 +136,7 @@
 					</aura:if>
 				</div>
 
-			</lightning:layoutItem>
+			</lightning:layoutItem> -->
 
 			<!-- <lightning:layoutItem flexibility="grow" size="4" padding="around-large">
 				<div class="{!'selection_box slds-p-around_large' + if(v.trialFieldsE.Path_Mobile__c, ' selected', '')}">
@@ -100,11 +151,10 @@
 				</div>
 			</lightning:layoutItem> -->
 
-			<lightning:layoutItem flexibility="grow" size="4" padding="around-large">
+			<!-- <lightning:layoutItem flexibility="grow" size="4" padding="around-large">
 				<div class="{!'selection_box slds-p-around_large' + if(v.trialFieldsE.Path_Build_Apps__c, ' selected', '')}">
 					<h1 class="slds-text-heading_large slds-m-around_large slds-align_absolute-center">App Building</h1>
 					<p class="slds-text-heading_medium slds-m-around_large slds-align_absolute-center">I want to see how administrators and developers build the apps</p>
-					<!-- <img src="http://via.placeholder.com/350x150"/> -->
 					<aura:if isTrue="{!!v.trialFieldsE.Path_Build_Apps__c}">
 						<lightning:button label="Select" value="Path_Build_Apps__c" onclick="{!c.select}" variant="brand" class="slds-align_absolute-center slds-button_huge"/>
 					</aura:if>
@@ -114,7 +164,7 @@
 				</div>
 			</lightning:layoutItem>
 
-		</lightning:layout>
+		</lightning:layout> -->
 
 		<c:UniversalAnalyticsPageTag pageName="/welcome/choosePath" pageTitle="choosePath"/>
 	</aura:if>

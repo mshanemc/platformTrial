@@ -6,7 +6,7 @@
 		if (event.getParams().changeType === "LOADED"){
 			console.log('record loaded');
 			console.log(component.get("v.trialFields"));
-			if (component.get("v.trialFields.Video_Watched__c") && component.get("v.trialFields.WelcomeViewed__c")){
+			if (component.get("v.trialFields.Paths_Chosen__c") && component.get("v.trialFields.WelcomeViewed__c")){
 				component.find("overlayLibModal").notifyClose();
 			}
 		}
@@ -128,7 +128,12 @@
 
 	},
 
-
+	checkboxChange : function(component, event, helper) {
+		// console.log(document.getElementById("path_see").checked);
+		// console.log(document.getElementById("path_build").checked);
+		component.set('v.trialFieldsE.Path_See_Apps__c', document.getElementById("path_see").checked);
+		component.set('v.trialFieldsE.Path_Build_Apps__c', document.getElementById("path_build").checked);
+	},
 
 
 
