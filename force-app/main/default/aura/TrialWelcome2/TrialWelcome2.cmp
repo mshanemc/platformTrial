@@ -66,7 +66,7 @@
 
 		<fieldset class="slds-form-element">
 			<div class="slds-form-element__control">
-				<div class="slds-visual-picker slds-visual-picker_medium">
+				<div class="slds-visual-picker slds-visual-picker_large">
 					<input type="checkbox" id="path_see" name="options" value="on" onchange="{!c.checkboxChange}"/>
 					<label for="path_see" >
 						<span class="slds-visual-picker__figure slds-visual-picker__icon slds-align_absolute-center">
@@ -106,7 +106,7 @@
 
 		<lightning:layout horizontalAlign="end">
 			<lightning:layoutItem>
-				<lightning:button variant="brand" label="Next" onclick="{!c.pathsSet}" disabled="{!!or(v.trialFieldsE.Path_See_Apps__c, v.trialFieldsE.Path_See_Apps__c)}" />
+				<lightning:button variant="brand" label="Next" onclick="{!c.pathsSet}" disabled="{!!or(v.trialFieldsE.Path_See_Apps__c, v.trialFieldsE.Path_Build_Apps__c)}" />
 			</lightning:layoutItem>
 		</lightning:layout>
 

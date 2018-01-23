@@ -43,7 +43,7 @@
   font-size: 1.2rem;
 }
 
-.THIS .slds-visual-picker.slds-visual-picker_medium {
+.THIS .slds-visual-picker.slds-visual-picker_medium, .THIS .slds-visual-picker.slds-visual-picker_large {
 	flex-direction: row;
 	width: 100%;
   justify-content: space-evenly;
