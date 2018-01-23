@@ -34,7 +34,7 @@
 				<!-- <p class="slds-text-heading_small slds-m-vertical_medium">Please watch this orientation video to get you started.</p> -->
 				<lightning:layout verticalAlign="stretch" multipleRows="true" class="fullHeight">
 
-					<lightning:layoutItem size="12" flexibility="no-flex">
+					<lightning:layoutItem size="12" flexibility="no-flex" class="slds-align-top">
 						<h1 class="slds-text-heading_medium"><b>Welcome to the Salesforce Platform Free Trial</b></h1>
 					</lightning:layoutItem>
 
@@ -47,7 +47,7 @@
 						should you choose to accept it, is to make saving the world easier.</p>
 					</lightning:layoutItem>
 
-					<lightning:layoutItem size="12" flexibility="no-flex" >
+					<lightning:layoutItem size="12" flexibility="no-flex" class="slds-align-bottom">
 						<lightning:button variant="brand" label="Let's go!" class="slds-button_huge" onclick="{!c.storySet}" />
 					</lightning:layoutItem>
 				</lightning:layout>

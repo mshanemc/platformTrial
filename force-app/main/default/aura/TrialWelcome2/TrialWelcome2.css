@@ -53,7 +53,7 @@
 
 .THIS .slds-visual-picker input:checked~label .slds-visual-picker__icon {
     background-color: transparent;
-    border-style: none;
+    border: 1px solid rgb(221, 219, 218);
 }
 
 .THIS .slds-visual-picker input:checked~label .slds-visual-picker__figure {
