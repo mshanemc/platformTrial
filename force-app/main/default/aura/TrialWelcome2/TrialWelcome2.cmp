@@ -91,7 +91,7 @@
 							</span>
 							<span class="slds-is-not-selected">
 								<!-- <lightning:icon iconName="action:close" variant="none" size="large" /> -->
-								<img src="https://raw.githubusercontent.com/mshanemc/platformTrial/33f3ee6e4c2487b6e76744bed573d3458f37c0fc/assets/Astro_lightning_welder.png"/>
+								<img src="https://raw.githubusercontent.com/mshanemc/platformTrial/master/assets/Astro_lightning_welder.png"/>
 							</span>
 						</span>
 						<span class="slds-visual-picker__body">
