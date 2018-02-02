@@ -15,3 +15,9 @@ sfdx force:user:permset:assign -n Referrals && sfdx force:data:bulk:upsert -f da
 sfdx force:user:create -f config/userDef/cloudy-user-def.json && sfdx msm:user:photo -f assets/cloudy-profile.png -l Cloudy &
 sfdx force:user:create -f config/userDef/codey-user-def.json && sfdx msm:user:photo -f assets/codey-profile.png  -l CodeBear &
 sfdx force:user:create -f config/userDef/astro-user-def.json && sfdx msm:user:photo -f assets/astro-profile.png  -l Nomical &
+
+# error handler, dependency for inspections
+sfdx force:package:install -i 04t6A000001QxsjQAC -w 20
+sfdx force:mdapi:deploy -f zippedMDAPI/inspections.zip -w 20
+sfdx force:user:permset:assign -n Inspections
+sfdx force:apex:execute -f SetupScripting/sampleCreation.cls
