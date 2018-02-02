@@ -3,14 +3,6 @@
     {
       "path": "force-app",
       "default":true
-    },
-    {
-      "path": "recruiting-dx",
-      "id" : "0Ho6A0000000006SAA",
-      "versionName" : "v 1.0",
-      "versionDescription" : "one and only",
-      "versionNumber" : "1.0.0.NEXT",
-      "ancestorId": ""
     }
   ],
   "namespace": "",
