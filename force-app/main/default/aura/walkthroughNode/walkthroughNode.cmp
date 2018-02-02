@@ -18,25 +18,20 @@
 			<h2 class="slds-text-heading_medium">{!v.targetFields.Header__c}</h2>
 		</header>
 	</aura:if> -->
+	<aura:if isTrue="{!v.targetFields.Show_Close_Button__c}">
+		<lightning:buttonIcon variant="bare-inverse" alternativeText="Close Popover" onclick="{!c.close}" class="slds-float_right slds-popover__close" size="small" iconName="utility:close"/>
+	</aura:if>
 
 	<div class="slds-popover__body">
 		<p><lightning:formattedRichText value="{!v.targetFields.BodyText__c}"/></p>
+		<div class="slds-grid slds-grid_vertical-align-center slds-m-top_small">
+			<aura:if isTrue="{!and(v.stepNumber, v.stepCount>1)}">
+				<span class="slds-text-title">	Step {!v.stepNumber} of {!v.stepCount}</span>
+			</aura:if>
+			<aura:if isTrue="{!v.targetFields.Show_Next_Button__c}">
+				<lightning:button variant="inverse" label="{!v.targetFields.Next_Button_Label__c}" onclick="{!c.next}" class="slds-col_bump-left"/>
+			</aura:if>
+		</div>
 	</div>
-
-	<!-- <aura:if isTrue="{!or(or(v.targetFields.Show_Next_Button__c, v.targetFields.Show_Close_Button__c), and(v.stepNumber, v.stepCount>1))}"> -->
-		<footer class="slds-popover__footer">
-			<div class="slds-grid slds-grid_vertical-align-center">
-				<aura:if isTrue="{!and(v.stepNumber, v.stepCount>1)}">
-					<span class="slds-text-title">	Step {!v.stepNumber} of {!v.stepCount}</span>
-				</aura:if>
-				<aura:if isTrue="{!v.targetFields.Show_Next_Button__c}">
-					<lightning:button variant="brand" label="{!v.targetFields.Next_Button_Label__c}" onclick="{!c.next}" class="slds-col_bump-left"/>
-				</aura:if>
-				<aura:if isTrue="{!v.targetFields.Show_Close_Button__c}">
-					<lightning:button variant="brand" label="Close" onclick="{!c.close}" class="slds-col_bump-left" />
-				</aura:if>
-			</div>
-		</footer>
-	<!-- </aura:if> -->
 
 </aura:component>
