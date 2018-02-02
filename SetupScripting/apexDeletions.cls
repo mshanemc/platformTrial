@@ -11,4 +11,6 @@ delete [select id from Path_Activity__c];
 delete [select id from Trial_Activity__c];
 delete [select id from Walkthrough__c];
 
+delete [select id from FeedItem];
+
 
