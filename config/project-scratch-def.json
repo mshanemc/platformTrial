@@ -1,10 +1,10 @@
 {
     "orgName": "platform-trial",
-    "edition": "Developer",
+    "sourceOrg": "00D6A000001h6L5UAI",
     "orgPreferences" : {
         "enabled": ["S1DesktopEnabled", "ChatterEnabled", "OfflineDraftsEnabled", "PathAssistantsEnabled", "NetworksEnabled" ]
     },
     "features": [
-        "Communities", "SiteDotCom", "Sites"
+        "Communities", "Sites"
     ]
 }

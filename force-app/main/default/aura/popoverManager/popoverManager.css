@@ -3,5 +3,5 @@
 }
 
 .THIS.uiPanel--default.positioned, .THIS .slds-popover__header {
-	border-color: rgb(6, 27, 63);
+	border-color: rgba(0,0,0,0);
 }
