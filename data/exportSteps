@@ -10,9 +10,6 @@ sfdx force:data:tree:export -d data -p -x orphan -q "select Active__c, Activity_
 ## accounts/contacts/missions
 sfdx force:data:tree:export -d data -p -q "select name, Description, Industry, Phone, Type, (select firstname, lastname, email, phone, mobilephone, title from Contacts), (select name, Assembly_Time__c, Covert__c, Mission_Description__c, Requested__c from Missions__r) from Account"
 
-## volunteer events with volunteers
-sfdx force:data:tree:export -d data -p -q "select name, Description__c, End__c, Partner__c, Start__c, (select Status__c from Volunteers__r) from Volunteer_Event__c"
-
 ## knowledge articles
 sfdx force:data:tree:export -d data -p -q "select id, Question__c, Answer__c, Summary, Title, UrlName, IsVisibleInApp, PublishStatus, Language from FAQ__kav"
 
