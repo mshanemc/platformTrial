@@ -25,7 +25,7 @@
             "Close_URL__c": "/sObject/Mission__c/list",
             "Assigned__c": false,
             "Active__c": true,
-            "Description__c": "<p>The SuperRangers have access to multiple apps on Salesofrce and use a custom app to manage their missions, assignments, and equipment. Let&#39;s take a look.</p>",
+            "Description__c": "<p>The SuperRangers have access to multiple apps on Salesforce and use a custom app to manage their missions, assignments, and equipment. Let&#39;s take a look.</p>",
             "Path_Name__c": "See Apps",
             "Path_Sequence__c": 1,
             "Requirements__c": "<p>Click the App Launcher</p><p>Notice the apps in the launcher</p><p>Open the Mission Planning App</p>",
