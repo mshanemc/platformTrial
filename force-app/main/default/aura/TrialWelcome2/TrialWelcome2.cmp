@@ -29,13 +29,13 @@
 			</lightning:layoutItem>
 
 			<lightning:layoutItem size="5" padding="around-medium">
-				<!-- <h1 class="slds-text-heading_large slds-m-bottom_large">Welcome to the Salesforce Platform Free Trial</h1> -->
+				<!-- <h1 class="slds-text-heading_large slds-m-bottom_large">Welcome to the Lightning Platform Free Trial</h1> -->
 
 				<!-- <p class="slds-text-heading_small slds-m-vertical_medium">Please watch this orientation video to get you started.</p> -->
 				<lightning:layout verticalAlign="stretch" multipleRows="true" class="fullHeight">
 
 					<lightning:layoutItem size="12" flexibility="no-flex" class="slds-align-top">
-						<h1 class="slds-text-heading_medium"><b>Welcome to the Salesforce Platform Free Trial</b></h1>
+						<h1 class="slds-text-heading_medium"><b>Welcome to the Lightning Platform Free Trial</b></h1>
 					</lightning:layoutItem>
 
 					<lightning:layoutItem size="12" flexibility="grow" class="slds-text-heading_medium">

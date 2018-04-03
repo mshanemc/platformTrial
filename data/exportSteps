@@ -15,4 +15,4 @@ sfdx force:data:tree:export -d data -p -q "select id, Question__c, Answer__c, Su
 
 
 
-## The Salesforce Platform includes accounts and contacts, so you can build apps around the same customers that your sales and service people interact with. No silos!
+## The Lightning Platform includes accounts and contacts, so you can build apps around the same customers that your sales and service people interact with. No silos!

@@ -78,7 +78,7 @@
             "Path_Sequence__c": 10,
             "Requirements__c": "<p>Find the Account for <b>New York City</b> using Global Search (the big box at the top that says &quot;Search Salesforce&quot;)</p>",
             "testMethod__c": "noTest",
-            "Trailhead_Content__c": "<p><a href=\"https://trailhead.salesforce.com/en/modules/lex_implementation_basics/units/lex_implementation_basics_welcome\" target=\"_blank\">CRM Basics</a></p><p><a href=\"https://trailhead.salesforce.com/en/modules/starting_force_com/units/starting_intro\" target=\"_blank\">Salesforce Platform Basics</a></p>",
+            "Trailhead_Content__c": "<p><a href=\"https://trailhead.salesforce.com/en/modules/lex_implementation_basics/units/lex_implementation_basics_welcome\" target=\"_blank\">CRM Basics</a></p><p><a href=\"https://trailhead.salesforce.com/en/modules/starting_force_com/units/starting_intro\" target=\"_blank\">Lightning Platform Basics</a></p>",
             "Value__c": "<p>Everything in Salesforce is searchable, including records, files, and discussions.</p>"
         },
         {
@@ -89,7 +89,7 @@
             "Name": "Customize Your App With Lightning App Builder and Components",
             "Assigned__c": false,
             "Active__c": true,
-            "Description__c": "<p>The Salesforce Platform allows our heroes to build apps without any code. Let&#39;s go behind the scenes into the setup and administatin screen to see how Trailblazers can build and customize apps with Lightning Components.</p>",
+            "Description__c": "<p>The Lightning Platform allows our heroes to build apps without any code. Let&#39;s go behind the scenes into the setup and administatin screen to see how Trailblazers can build and customize apps with Lightning Components.</p>",
             "Path_Name__c": "Build Apps",
             "Path_Sequence__c": 20,
             "Requirements__c": "<ol><li>Click <a href=\"https://www.appbuilder.com\" target=\"_blank\">here</a> to open App Builder in a new window (normally you&#39;d click the gear icon in the top right and &quot;Edit Page&quot;, but sometimes it&#39;s handy to have your instructions in a separate window!).</li><li>In the left panel are lightning components (reusable blocks of code) Salesforce offers for you to customize the app.</li><li>Find the <b>Path</b> component and drag it into the header (just below the helicopter icon)</li><li>Click the <b>Save</b> button in the top right</li><li>Return to this page and refresh your browser to see the path component you've added go live</li></ol>",
@@ -137,7 +137,7 @@
             "Name": "Congratulations! You've Completed the Mission!",
             "Assigned__c": false,
             "Active__c": true,
-            "Description__c": "<p>You're all finished with our Salesforce Platform free trial.</p><p><br></p><p>There&#39;s tons more app building tools for you to explore in the <b>Setup</b> menu in the upper right.</p><br><p>You can explore on your own or head over to Trailhead where hundreds of trails can take you on guided learning journeys through Salesforce.</p><br><p>If you have any questions or feedback, please use the feedback button to share.</p>",
+            "Description__c": "<p>You're all finished with our Lightning Platform free trial.</p><p><br></p><p>There&#39;s tons more app building tools for you to explore in the <b>Setup</b> menu in the upper right.</p><br><p>You can explore on your own or head over to Trailhead where hundreds of trails can take you on guided learning journeys through Salesforce.</p><br><p>If you have any questions or feedback, please use the feedback button to share.</p>",
             "Path_Sequence__c": 100
         },
         {
