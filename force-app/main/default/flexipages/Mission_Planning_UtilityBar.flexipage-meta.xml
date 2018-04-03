@@ -34,39 +34,7 @@
             </componentInstanceProperties>
             <componentName>CurrentTask</componentName>
         </componentInstances>
-        <!-- <componentInstances>
-            <componentInstanceProperties>
-                <name>eager</name>
-                <type>decorator</type>
-                <value>false</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>height</name>
-                <type>decorator</type>
-                <value>700</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>icon</name>
-                <type>decorator</type>
-                <value>work_order_type</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>label</name>
-                <type>decorator</type>
-                <value>Other Tasks</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>scrollable</name>
-                <type>decorator</type>
-                <value>true</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>width</name>
-                <type>decorator</type>
-                <value>800</value>
-            </componentInstanceProperties>
-            <componentName>AllTasks</componentName>
-        </componentInstances> -->
+
         <componentInstances>
             <componentInstanceProperties>
                 <name>eager</name>

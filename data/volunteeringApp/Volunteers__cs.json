@@ -6,7 +6,7 @@
                 "referenceId": "Volunteers__cRef1"
             },
             "Status__c": "Volunteered",
-            "Event__c": "@Volunteer_Event__cRef1"
+            "Event__c": "@VV1"
         }
     ]
 }

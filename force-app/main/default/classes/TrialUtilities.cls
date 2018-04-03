@@ -53,8 +53,6 @@ public with sharing class TrialUtilities {
 	//public static final	id articleId = 'ka0f4000000dJfoAAE';
 	public static final string targetCity = 'City of San Francisco';
 
-	//TODO: guide says "one of our upcoming volunteering events" but the test is much more specific!
-	public static final id volunteerEvent = 'a06f4000000tg24AAA';
 
 	public static void reset(){
 
@@ -84,11 +82,6 @@ public with sharing class TrialUtilities {
 		list<Assignment__c> assignments = [select id from Assignment__c];
 		delete [select id from feedItem where parentId =: MissionId or parentId in: assignments];
 
-		//remove feeditems
-		delete [select id from feedItem where Type='QuestionPost' or parentId =: volunteerEvent];
-
-		//remove volunteer event signup
-		delete [select id from Volunteers__c where Event__c =: volunteerEvent and createdById =: UserInfo.GetUserId()];
 	}
 
 	@AuraEnabled
@@ -177,27 +170,6 @@ public with sharing class TrialUtilities {
 
 	}
 
-	@AuraEnabled
-	public static Id checkVolunteer(){
-
-		//check that there's a volunteer event signup from the current user
-		list<Volunteers__c> vols = [select id from volunteers__c where Event__c =: volunteerEvent and createdById =: UserInfo.GetUserId()];
-		//system.assert(vols.size()>0, 'It doesn\'t look like you signed up yet.');
-		if (vols.size()==0){
-			throw new AuraHandledException('It doesn\'t look like you signed up yet.');
-		}
-
-		//check that there's a post on the event from the current user
-		list<FeedItem> posts = [select id from feeditem where ParentId =: volunteerEvent and createdById =: UserInfo.GetUserId()];
-		//system.assert(posts.size()>0, 'It doesn\'t look like you posted a message on the event');
-		if (posts.size()==0){
-			throw new AuraHandledException('It doesn\'t look like you posted a message on the event');
-		}
-		// nextTask();
-		// return true;
-		return readNextTask();
-
-	}
 
 	public static id readNextTask(){
 		Trial_Activity__c ta = [select id, Current_Step__c from Trial_Activity__c];

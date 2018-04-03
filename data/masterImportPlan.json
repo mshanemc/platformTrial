@@ -32,22 +32,6 @@
         ]
     },
     {
-        "sobject": "Volunteer_Event__c",
-        "saveRefs": true,
-        "resolveRefs": false,
-        "files": [
-            "Volunteer_Event__cs.json"
-        ]
-    },
-    {
-        "sobject": "Volunteers__c",
-        "saveRefs": false,
-        "resolveRefs": true,
-        "files": [
-            "Volunteers__cs.json"
-        ]
-    },
-    {
         "sobject": "Path_Activity__c",
         "saveRefs": true,
         "resolveRefs": false,
