@@ -76,7 +76,7 @@
             "Description__c": "<p>The city of New York needs our help.</p>",
             "Path_Name__c": "See Apps",
             "Path_Sequence__c": 10,
-            "Requirements__c": "<p>Find the Account for <b>New York City</b> using Global Search (the big box at the top that says &quot;Search Salesforce&quot;)</p>",
+            "Requirements__c": "<p>Find the Account for <b>New York City</b> using Global Search (the big box at the top that says &quot;Search Missions and more&quot;)</p>",
             "testMethod__c": "noTest",
             "Trailhead_Content__c": "<p><a href=\"https://trailhead.salesforce.com/en/modules/lex_implementation_basics/units/lex_implementation_basics_welcome\" target=\"_blank\">CRM Basics</a></p><p><a href=\"https://trailhead.salesforce.com/en/modules/starting_force_com/units/starting_intro\" target=\"_blank\">Lightning Platform Basics</a></p>",
             "Value__c": "<p>Everything in Salesforce is searchable, including records, files, and discussions.</p>"
