@@ -18,7 +18,7 @@
   <!-- welcome message -->
 	<aura:if isTrue="{!and(v.trialFields, !v.trialFields.WelcomeViewed__c)}">
 
-		<lightning:layout horizontalAlign="space" verticalAlign="stretch">
+		<lightning:layout horizontalAlign="spread" verticalAlign="stretch">
 
 			<lightning:layoutItem size="7" class="background">
 				<lightning:layout horizontalAlign="center" verticalAlign="stretch" class="fullHeight">
