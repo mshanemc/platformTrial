@@ -18,7 +18,7 @@
   <!-- welcome message -->
 	<aura:if isTrue="{!and(v.trialFields, !v.trialFields.WelcomeViewed__c)}">
 
-		<lightning:layout horizontalAlign="spread" verticalAlign="stretch">
+		<lightning:layout horizontalAlign="space" verticalAlign="stretch">
 
 			<lightning:layoutItem size="7" class="background">
 				<lightning:layout horizontalAlign="center" verticalAlign="stretch" class="fullHeight">
@@ -65,25 +65,31 @@
 		<p class="slds-m-bottom_xx-large slds-text-align_center">Click all that apply. We'll make sure that your tour focuses on those items.</p>
 
 		<fieldset class="slds-form-element">
-			<div class="slds-form-element__control">
-				<div class="slds-visual-picker slds-visual-picker_large">
-					<input type="checkbox" id="path_see" name="options" value="on" onchange="{!c.checkboxChange}"/>
-					<label for="path_see" >
+			<lightning:layout horizontalAlign="space" verticalAlign="stretch">
+				<lightning:layoutItem class="slds-visual-picker slds-visual-picker_large">
+					<input type="checkbox" id="path_see" name="options" value="on" onchange="{!c.checkboxChange}" />
+					<label for="path_see">
 						<span class="slds-visual-picker__figure slds-visual-picker__icon slds-align_absolute-center">
 							<span class="slds-is-selected">
-								<lightning:icon iconName="action:check" variant="none" size="large"/>
+								<lightning:icon iconName="action:check" variant="none" size="large" />
 							</span>
 							<span class="slds-is-not-selected">
 								<!-- <lightning:icon iconName="action:close" variant="none" size="large" /> -->
-								<img src="https://raw.githubusercontent.com/mshanemc/platformTrial/33f3ee6e4c2487b6e76744bed573d3458f37c0fc/assets/Codey_lightning_laptop.png"/>
+								<img src="https://raw.githubusercontent.com/mshanemc/platformTrial/33f3ee6e4c2487b6e76744bed573d3458f37c0fc/assets/Codey_lightning_laptop.png"
+								/>
 							</span>
 						</span>
 						<span class="slds-visual-picker__body">
-							<h1 class="slds-text-heading_medium"><b>Apps in Action</b></h1>
-							<p>I want to see employees experience apps built on Salesforce</p>
+							<h1 class="slds-text-heading_medium">
+								<b>Apps in Action</b>
+							</h1>
+							<p>I want to see how employees experience apps built on Salesforce</p>
 						</span>
 					</label>
-					<input type="checkbox" id="path_build" name="options" value="on" onchange="{!c.checkboxChange}"/>
+				</lightning:layoutItem>
+
+				<lightning:layoutItem class="slds-visual-picker slds-visual-picker_large">
+					<input type="checkbox" id="path_build" name="options" value="on" onchange="{!c.checkboxChange}" />
 					<label for="path_build">
 						<span class="slds-visual-picker__figure slds-visual-picker__icon slds-align_absolute-center">
 							<span class="slds-is-selected">
@@ -91,16 +97,19 @@
 							</span>
 							<span class="slds-is-not-selected">
 								<!-- <lightning:icon iconName="action:close" variant="none" size="large" /> -->
-								<img src="https://raw.githubusercontent.com/mshanemc/platformTrial/master/assets/Astro_lightning_welder.png"/>
+								<img src="https://raw.githubusercontent.com/mshanemc/platformTrial/master/assets/Astro_lightning_welder.png" />
 							</span>
 						</span>
 						<span class="slds-visual-picker__body">
-							<h1 class="slds-text-heading_medium"><b>App Building</b></h1>
+							<h1 class="slds-text-heading_medium">
+								<b>App Building</b>
+							</h1>
 							<p>I want to see how administrators and developers build the apps</p>
 						</span>
 					</label>
-				</div>
-			</div>
+				</lightning:layoutItem>
+
+			</lightning:layout >
 		</fieldset>
 
 
