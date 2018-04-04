@@ -3,8 +3,8 @@
 	min-height: 75vh;
 	margin: -0.75rem;
 	background-repeat: no-repeat;
-	background-size: 100% 120%;
-	background-position: bottom;
+	background-size: cover;
+	background-position: center bottom;
 }
 
 .THIS .fullHeight {
