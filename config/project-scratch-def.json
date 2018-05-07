@@ -1,5 +1,6 @@
 {
     "orgName": "platform-trial",
+    "adminEmail" : "platformpmmdemos@gmail.com",
     "sourceOrg": "00D6A000001h6L5UAI",
     "orgPreferences" : {
         "enabled": ["S1DesktopEnabled", "ChatterEnabled", "OfflineDraftsEnabled", "PathAssistantsEnabled", "NetworksEnabled" ]
