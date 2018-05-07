@@ -40,33 +40,6 @@
 
 	//after you've done your orientation story
 	storySet : function(component) {
-		component.set("v.trialFieldsE.Video_Watched__c", true);
-		component.set("v.trialFieldsE.WelcomeViewed__c", true);
-		//component.set("v.trialFieldsE.Paths_Chosen__c", true);
-		//close the modal that we're in
-		console.log(component.get("v.trialFieldsE"));
-
-		component.find("trialRecE").saveRecord(
-			$A.getCallback(function(saveResult){
-				console.log(saveResult);
-				if (saveResult.state === "SUCCESS"){
-					//happy logic here
-					component.find("trialRecE").reloadRecord();
-					// component.find("overlayLibModal").notifyClose();
-					// component.find("pom").startPopovers();
-				} else if (saveResult.state === "INCOMPLETE") {
-					console.log("User is offline, device doesn't support drafts.");
-				} else if (saveResult.state === "ERROR"){
-					console.log(saveResult.getError());
-					component.find("leh").passErrors(saveResult.error);
-				}
-			})
-		);
-
-	},
-
-	//after you've done your orientation story
-	pathsSet: function (component) {
 		var action = component.get("c.nextTaskId");
 		action.setCallback(this, function(a){
 			console.log(a.getReturnValue());
@@ -74,7 +47,11 @@
 			if (state === "SUCCESS") {
 				component.set("v.trialFieldsE.Paths_Chosen__c", true);
 				component.set("v.trialFieldsE.Current_Step__c", a.getReturnValue());
-				console.log(component.get("v.trialFieldsE"));
+
+				component.set("v.trialFieldsE.Video_Watched__c", true);
+				component.set("v.trialFieldsE.WelcomeViewed__c", true);
+				component.set('v.trialFieldsE.Path_See_Apps__c', true);
+				component.set('v.trialFieldsE.Path_Build_Apps__c', true);
 
 				component.find("trialRecE").saveRecord(
 					$A.getCallback(function (saveResult) {
@@ -96,10 +73,46 @@
 				console.log(a.getError());
 			}
 		});
+
 		$A.enqueueAction(action);
 
-
 	},
+
+	//after you've done your orientation story
+	// pathsSet: function (component) {
+	// 	var action = component.get("c.nextTaskId");
+	// 	action.setCallback(this, function(a){
+	// 		console.log(a.getReturnValue());
+	// 		var state = a.getState();
+	// 		if (state === "SUCCESS") {
+	// 			component.set("v.trialFieldsE.Paths_Chosen__c", true);
+	// 			component.set("v.trialFieldsE.Current_Step__c", a.getReturnValue());
+	// 			console.log(component.get("v.trialFieldsE"));
+
+	// 			component.find("trialRecE").saveRecord(
+	// 				$A.getCallback(function (saveResult) {
+	// 					console.log(saveResult);
+	// 					if (saveResult.state === "SUCCESS") {
+	// 						//happy logic here
+	// 						component.find("trialRecE").reloadRecord();
+	// 						component.find("overlayLibModal").notifyClose();
+	// 						// component.find("pom").startPopovers();
+	// 					} else if (saveResult.state === "INCOMPLETE") {
+	// 						console.log("User is offline, device doesn't support drafts.");
+	// 					} else if (saveResult.state === "ERROR") {
+	// 						console.log(saveResult.getError());
+	// 						component.find("leh").passErrors(saveResult.error);
+	// 					}
+	// 				})
+	// 			);
+	// 		} else if (state === "ERROR") {
+	// 			console.log(a.getError());
+	// 		}
+	// 	});
+	// 	$A.enqueueAction(action);
+
+
+	// },
 
 	doInit : function(component) {
 
@@ -128,12 +141,10 @@
 
 	},
 
-	checkboxChange : function(component, event, helper) {
-		// console.log(document.getElementById("path_see").checked);
-		// console.log(document.getElementById("path_build").checked);
-		component.set('v.trialFieldsE.Path_See_Apps__c', document.getElementById("path_see").checked);
-		component.set('v.trialFieldsE.Path_Build_Apps__c', document.getElementById("path_build").checked);
-	},
+	// checkboxChange : function(component, event, helper) {
+	// 	component.set('v.trialFieldsE.Path_See_Apps__c', document.getElementById("path_see").checked);
+	// 	component.set('v.trialFieldsE.Path_Build_Apps__c', document.getElementById("path_build").checked);
+	// },
 
 
 
