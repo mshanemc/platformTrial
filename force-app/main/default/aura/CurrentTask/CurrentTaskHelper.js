@@ -49,10 +49,13 @@
 		let actionName = "c." + component.get("v.stepFields.testMethod__c");
 		console.log(actionName);
 		let action = component.get(actionName);
-		console.log(action);
+
 		action.setCallback(this, function (a) {
 			let state = a.getState();
 			if (state === "SUCCESS") {
+
+				component.find("tvua").eventMethod("success", component.get("v.stepFieldsE.testMethod__c"), component.get("v.stepFieldsE.Name"));
+
 				console.log(a.getReturnValue());  //getReturnValue is the value of the next step in the chain
 				if (a.getReturnValue()) {
 					//mark current path complete
@@ -86,7 +89,6 @@
 							}
 						})
 					);
-					component.find("tvua").eventMethod("success", component.get("v.methodName"));
 					$A.get("e.force:showToast")
 						.setParams({ "message": "You did it!  Let's move on to the next task", "type": "success" }).fire();
 					//finally, pop the utility open

@@ -25,7 +25,12 @@
 	},
 
 	handleEvent : function(component, event, helper) {
-		helper.sendEvent(component, event.getParam("category"), event.getParam("action"), event.getParam("label"));
+		const args = event.getParam('arguments');
+		console.log('args passed to the UA controller');
+		console.log(args.category);
+		console.log(args.action);
+		console.log(args.label);
+		helper.sendEvent(component, args.category, args.action, args.label);
 	},
 
 
