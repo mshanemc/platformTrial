@@ -15,11 +15,11 @@ sleep 0.1 && sfdx force:user:create -f config/userDef/astro-user-def.json && sfd
 # install packages
 
 # volunteering
-sfdx force:package:install -i 04t6A000001Uee5QAC -w 20
+sfdx force:package:install --package 04t6A000001Uee5QAC -w 20
 sfdx force:user:permset:assign -n VolunteeringApp
 sfdx force:data:tree:import -p data/volunteeringApp/VolunteerImportPlan.json
 sfdx force:apex:execute -f SetupScripting/VolunteerSetupScript.cls &
 
 # recruiting
-sfdx force:package:install -i 04t6A000001Uee0QAC -w 20
+sfdx force:package:install --package 04t6A000001Uee0QAC -w 20
 sfdx force:user:permset:assign -n Referrals && sfdx force:data:bulk:upsert -f data/referrals.csv -s Referral__c -i Id &
