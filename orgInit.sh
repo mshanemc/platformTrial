@@ -23,10 +23,3 @@ sfdx force:apex:execute -f SetupScripting/VolunteerSetupScript.cls &
 # recruiting
 sfdx force:package:install -i 04t6A000001Uee0QAC -w 20
 sfdx force:user:permset:assign -n Referrals && sfdx force:data:bulk:upsert -f data/referrals.csv -s Referral__c -i Id &
-
-# error handler, dependency for inspections
-# sfdx force:package:install -i 04t6A000001QxsjQAC -w 20
-
-# sfdx force:mdapi:deploy -f zippedMDAPI/inspect.zip -w 20
-# sfdx force:user:permset:assign -n Inspections
-# sfdx force:apex:execute -f SetupScripting/sampleCreation.cls
