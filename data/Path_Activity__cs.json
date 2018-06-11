@@ -22,7 +22,7 @@
                 "referenceId": "Path_Activity__cRef2"
             },
             "Name": "Open the Mission Planning App",
-            "Close_URL__c": "/sObject/Mission__c/list",
+            "Close_URL__c": "/o/Mission__c/list",
             "Assigned__c": false,
             "Active__c": true,
             "Description__c": "<p>The SuperRangers have access to multiple apps on Salesforce and use a custom app to manage their missions, assignments, and equipment. Let&#39;s take a look.</p>",
