@@ -39,10 +39,6 @@
         <apexClass>feedback</apexClass>
         <enabled>true</enabled>
     </classAccesses>
-    <classAccesses>
-        <apexClass>orgChart</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
     <custom>false</custom>
     <externalDataSourceAccesses>
         <enabled>false</enabled>
