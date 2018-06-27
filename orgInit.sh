@@ -1,4 +1,4 @@
-sfdx force:org:create -s -f config/project-scratch-def.json -d 7
+sfdx force:org:create -s -f config/project-scratch-def.json -d 7 --wait 60
 sfdx force:source:push
 
 sfdx force:user:permset:assign -n TrialAdmin
