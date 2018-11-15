@@ -6,7 +6,7 @@
     <formFactors>Large</formFactors>
     <label>Platform Trial</label>
     <navType>Standard</navType>
-    <tab>Start</tab>
+    <tabs>Start</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Platform_Trial_Welcome_UtilityBar</utilityBar>
 </CustomApplication>

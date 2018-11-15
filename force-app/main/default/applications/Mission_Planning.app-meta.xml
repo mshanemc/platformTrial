@@ -9,13 +9,13 @@
     <formFactors>Large</formFactors>
     <label>Mission Planning</label>
     <navType>Standard</navType>
-    <tab>Mission__c</tab>
-    <tab>Equipment__x</tab>
-    <tab>standard-Account</tab>
-    <tab>standard-File</tab>
-    <tab>standard-Dashboard</tab>
-    <tab>standard-report</tab>
-    <tab>standard-OtherUserProfile</tab>
+    <tabs>Mission__c</tabs>
+    <tabs>Equipment__x</tabs>
+    <tabs>standard-Account</tabs>
+    <tabs>standard-File</tabs>
+    <tabs>standard-Dashboard</tabs>
+    <tabs>standard-report</tabs>
+    <tabs>standard-OtherUserProfile</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Mission_Planning_UtilityBar</utilityBar>
 </CustomApplication>

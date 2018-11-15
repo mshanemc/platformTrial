@@ -7,10 +7,10 @@
     <formFactors>Large</formFactors>
     <label>Trial Management</label>
     <navType>Standard</navType>
-    <tab>Welcome</tab>
-    <tab>Trial_Activity__c</tab>
-    <tab>Path_Activity__c</tab>
-    <tab>Walkthrough__c</tab>
+    <tabs>Welcome</tabs>
+    <tabs>Trial_Activity__c</tabs>
+    <tabs>Path_Activity__c</tabs>
+    <tabs>Walkthrough__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>MetaApp_UtilityBar</utilityBar>
 </CustomApplication>
