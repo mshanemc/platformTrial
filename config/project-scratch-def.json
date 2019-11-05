@@ -1,18 +1,24 @@
 {
-    "orgName": "platform-trial",
-    "adminEmail" : "platformpmmdemos@gmail.com",
-    "description" : "public trial org",
-    "template": "0TT6A000006BlTd",
-    "settings": {
-        "orgPreferenceSettings": {
-            "s1DesktopEnabled": true,
-            "chatterEnabled": true,
-            "offlineDraftsEnabled": true,
-            "pathAssistantsEnabled": true,
-            "networksEnabled": true
-        }
+  "orgName": "platform-trial",
+  "adminEmail": "platformpmmdemos@gmail.com",
+  "description": "public trial org",
+  "template": "0TT6A000006BlTd",
+  "settings": {
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
     },
-    "features": [
-        "Communities", "Sites"
-    ]
+    "chatterSettings": {
+      "enableChatter": true
+    },
+    "mobileSettings": {
+      "enableOfflineDraftsEnabled": true
+    },
+    "pathAssistantSettings": {
+      "pathAssistantEnabled": true
+    },
+    "communitiesSettings": {
+      "enableNetworksEnabled": true
+    }
+  },
+  "features": ["Communities", "Sites"]
 }
