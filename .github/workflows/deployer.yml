@@ -5,24 +5,12 @@ on:
         branches:
             - master
     schedule:
-        -
-            cron: '*/31 1 * * 0'
+        - cron: '*/31 1 * * 0'
 jobs:
     production:
         runs-on: ubuntu-latest
         name: production deployer end-to-end test
         steps:
-            -
-                name: production
-                id: production
-                uses: mshanemc/deployer-check-javascript-action@master
-    prerelease:
-        runs-on: ubuntu-latest
-        name: prerelease deployer end-to-end test
-        steps:
-            -
-                name: prerelease
-                id: prerelease
-                uses: mshanemc/deployer-check-javascript-action@master
-                with:
-                    deployer-url: 'https://deployer-prerelease.herokuapp.com'
+            - name: production
+              id: production
+              uses: mshanemc/deployer-check-javascript-action@master
